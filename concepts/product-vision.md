@@ -34,7 +34,7 @@ That vision then cascades through initiatives (use cases and data), technology (
 infrastructure), and people (talent, organization, and governance), each answering three guiding
 questions. Where-to-play choices follow from sources of advantage, above all the richness of
 proprietary data mapped across the customer, operations, administrative, and risk quadrants of the
-AI Radar 2.0.[^p1-product-vision] This requires viewing the enterprise as a value chain — front
+AI Radar 2.0.[^p1-product-vision][.0] This requires viewing the enterprise as a value chain — front
 office (customers), operations, and support functions — so the vision is grounded in the
 processes AI will actually enhance.[^p1-product-vision]
 
@@ -48,7 +48,7 @@ matters, and who benefits and how their lives change — and passes six tests: i
 explain.[^p2-product-vision] Strategy then translates customer problems into products that are
 desirable, feasible, and viable, cast into execution via frameworks such as V2MOM and the Product
 Strategy Canvas, whose layers run from vision, mission, and values down through arenas, bets, and
-competencies to metrics and hurdles.[^p2-product-vision]
+competencies to metrics and hurdles.[^p2-product-vision][]
 
 The two programs converge on vision as the alignment device that anchors all downstream
 decision-making and prioritization. The C-suite's "AI-powered enterprise" is the enterprise-level
@@ -70,6 +70,8 @@ enterprise.
 
 [^p1-product-vision]: [AI Strategies for Business Transformations](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
 [^p2-product-vision]: [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
+[.0]: [AI Radar 2.0](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
+[]: [V2MOM Framework](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
 
 ## Extensions
 

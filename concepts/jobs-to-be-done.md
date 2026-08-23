@@ -30,7 +30,7 @@ The **AI Strategies for Business Transformations** program uses jobs to be done 
 organizing framework for AI value creation across the whole enterprise. In customer management, the
 Customer Experience DNA (CxDNA) maps the customer's jobs along the life cycle — discover, learn,
 evaluate, buy, use, and advocate — and pairs them with the organization's matching jobs of reaching,
-acquiring, converting, selling more to, serving, and retaining the customer.[^p1-jobs-to-be-done]
+acquiring, converting, selling more to, serving, and retaining the customer.[^p1-jobs-to-be-done][]
 Once the jobs on both sides are explicit, AI use cases hang onto them naturally across the three
 pillars of demand generation, sales enablement, and service and retention.[^p1-jobs-to-be-done]
 
@@ -70,6 +70,8 @@ AI use case that does the job better than the incumbent alternative.
 
 [^p1-jobs-to-be-done]: [AI Strategies for Business Transformations](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
 [^p2-jobs-to-be-done]: [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
+[]: [Customer Experience DNA Framework](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
+[]: [Jobs-To-Be-Done & Real-Win-Worth Frameworks](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
 
 ## Extensions
 

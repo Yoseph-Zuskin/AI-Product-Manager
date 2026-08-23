@@ -62,13 +62,13 @@ AI Strategies for Business Transformations supplies the execution engine for the
 Its framework for AI in customer management divides demand generation into inbound discovery —
 insights, personas, segmentation — and outbound execution — offers, creative, channels, and
 budget — and reaches its endgame in hyper-personalization, the tailoring of offerings, content,
-and experience to each individual customer in real time [^p1-go-to-market]. The "right customer,
+and experience to each individual customer in real time [^p1-go-to-market][.0]. The "right customer,
 right channel, right time, individual customer" principle is the GTM plan's promise operationalized
 by AI, from personalized pricing to generative playlists and next-best actions. The same module
 propels sales enablement with AI: lead scoring prioritizes prospects on buying signals and
 engagement, generative and agentic AI produces copilot-style real-time sales support, dynamic
 proposals, sales playbooks, and automated follow-ups, accelerating the pipeline from
-marketing-qualified to sales-qualified leads [^p1-go-to-market].
+marketing-qualified to sales-qualified leads [^p1-go-to-market][.0].
 
 The two programs converge on a clear division of labor: the GTM plan defines the market-facing
 story — who, what, value, channels, price, and readiness — while AI makes each of those seven
@@ -83,6 +83,9 @@ audience [^p1-go-to-market][^p2-go-to-market].
 [^p1-go-to-market]: [AI Strategies for Business Transformations](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
 [^p2-go-to-market]: [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
 [^saboo-developer-gtm]: [Awesome LLM Apps - Shubham Saboo](https://github.com/Shubhamsaboo/awesome-llm-apps)
+[.0]: [AI Canvas 2.0 Framework](https://kdacapabilities.com/ai-workflows/ai-canvas/)
+[.0]: [AI Radar 2.0](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
+[]: [V2MOM Framework](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
 
 ## Extensions
 

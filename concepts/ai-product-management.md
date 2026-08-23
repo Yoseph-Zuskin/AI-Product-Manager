@@ -34,12 +34,18 @@ Product Strategy** frames the craft around four competency domains — customer,
 and leadership — with the customer at the center as the go-to expert on jobs to be done, pain
 points and personas; a basic but honest understanding of how the product works; business acumen
 for unit economics, partnerships and treating the product as a P&L; and the soft skills needed to
-lead people over whom you have no authority.[^p2-ai-product-management] Within that frame, AI
+lead people over whom you have no authority.[^p2-ai-product-management]
+Within that frame, AI
 shifts the PM's job from producing analyses and outputs to orchestrating outcomes: products become
 more intelligent, adaptive and personalized as AI is infused into them, so the PM's work becomes
 prompting and tuning models, designing agents and coaching AI tools that write user stories, build
 roadmaps and gather customer feedback — supported by emerging skills in prompt engineering,
-ethical oversight and outcome-focused leadership.[^p2-ai-product-management]
+ethical oversight and outcome-focused leadership.[^p2-ai-product-management] Within that frame, AI
+shifts the PM's job from producing analyses and outputs to orchestrating outcomes: products become
+more intelligent, adaptive and personalized as AI is infused into them, so the PM's work becomes
+prompting and tuning models, designing agents and coaching AI tools that write user stories, build
+roadmaps and gather customer feedback — supported by emerging skills in prompt engineering,
+ethical oversight and outcome-focused leadership.[^p2-ai-product-management][]
 
 **AI Strategies for Business Transformations** supplies the organizational counterpart: AI
 capability is built as a maturity journey — crawl, walk, run, fly. At the crawl stage teams
@@ -69,6 +75,12 @@ cross-functional teams through influence toward measurable business outcomes.[^p
 
 [^p1-ai-product-management]: [AI Strategies for Business Transformations](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
 [^p2-ai-product-management]: [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
+[.0]: [AI Canvas 2.0 Framework](https://kdacapabilities.com/ai-workflows/ai-canvas/)
+[.0]: [AI Radar 2.0](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
+: [AI Capability Maturity Model](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
+[]: [Customer Experience DNA Framework](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
+[]: [V2MOM Framework](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
+[]: [Jobs-To-Be-Done & Real-Win-Worth Frameworks](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
 
 ## Extensions
 

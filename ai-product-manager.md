@@ -23,6 +23,24 @@ sources:
   title: AI-Driven Product Strategy
   resource: https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program
   author: human:mohan-sawhney
+- id: r-ai-canvas-2.0
+  title: AI Canvas 2.0 Framework
+  resource: https://kdacapabilities.com/ai-workflows/ai-canvas/
+- id: r-ai-radar-2.0
+  title: AI Radar 2.0
+  resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
+- id: r-ai-cmm
+  title: AI Capability Maturity Model
+  resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
+- id: r-cx-dna
+  title: Customer Experience DNA Framework
+  resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
+- id: r-v2mom
+  title: V2MOM Framework
+  resource: https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program
+- id: r-jtbd-rww
+  title: Jobs-To-Be-Done & Real-Win-Worth Frameworks
+  resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
 ---
 
 This concept is the top node of the AI-Product-Manager bundle. It is an **agent**: a
