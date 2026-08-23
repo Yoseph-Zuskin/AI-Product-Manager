@@ -22,6 +22,14 @@ into an AI Product Manager practice, plus personal concepts.
 * [Influencing and Communication](/concepts/influencing-and-communication.md) - stakeholder alignment, storytelling.
 * [AI Product Management](/concepts/ai-product-management.md) - AI across the product life cycle.
 
+# Bridging Concepts (New)
+
+* [ML Model Governance](/concepts/ml-model-governance.md) - governance framework for ML models.
+* [AI Architecture Decisions](/concepts/ai-architecture-decisions.md) - architecture decision framework for AI products.
+* [Cross-Functional AI Team](/concepts/cross-functional-ai-team.md) - team topology and collaboration model.
+* [AI Product Deployment](/concepts/ai-product-deployment.md) - deployment patterns across cloud/on-prem/hybrid.
+* [Responsible AI Product Practice](/concepts/responsible-ai-product-practice.md) - responsible AI lifecycle framework.
+
 # Planned concepts
 
 * [placeholder for the owner's personal concepts — to be named and added]
