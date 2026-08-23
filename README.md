@@ -1,1 +1,1 @@
-C:/Users/zuski/Documents/Bundles/AI-Product-Manager/ai-product-manager.md
+ai-product-manager.md
