@@ -1,0 +1,41 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/../hooks/on-prompt.js\"",
+            "timeout": 5,
+            "statusMessage": "Loading AI-PM ruleset..."
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/../hooks/on-task.js\"",
+            "timeout": 5,
+            "statusMessage": "Loading AI-PM ruleset..."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/../hooks/on-prompt.js\"",
+            "timeout": 5,
+            "statusMessage": "Injecting AI-PM ruleset..."
+          }
+        ]
+      }
+    ]
+  }
+}

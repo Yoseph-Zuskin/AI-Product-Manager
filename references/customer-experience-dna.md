@@ -7,7 +7,7 @@ tags:
 - customer-experience
 - framework
 - lifecycle
-resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
+resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
 author: Mohanbir Sawhney
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
 ---
@@ -18,15 +18,13 @@ Customer lifecycle framework mapping customer jobs across six lifecycle stages, 
 ## Six Lifecycle Stages
 
 | Stage | Customer Jobs | Organizational Matching Jobs |
-|-------|--------------|------------------------------|
+| --- | --- | --- |
 | **Discover** | Researching, exploring options | Reaching, acquiring |
 | **Learn** | Evaluating, comparing | Converting, selling more |
 | **Evaluate** | Assessing options | Engaging |
 | **Buy** | Purchasing, onboarding | Retaining |
-| **Use** | Using the product/service | Serving |
-| **Advocate** | Promoting, referring | Bonding |
-
-## Framework Application
+| **Use** | Using product/service | Serving |
+| **Advocate** | Referring, reviewing | Advocating, expanding |
 
 - Maps **Customer Action** sequences (Discover → Learn → Evaluate → Buy → Use → Advocate)
 - Pairs with **Organization Action** sequences (Reach → Acquire → Convert → Develop → Retain → Bond)
@@ -35,5 +33,5 @@ Customer lifecycle framework mapping customer jobs across six lifecycle stages, 
 
 ## Sources
 
-- [AI Strategies for Business Transformation | Kellogg](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program) — official program page references CxDNA as the customer experience framework
-- [CxDNA module in program curriculum](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program) — module 2 (AI and customer experience management)
+- [AI Strategies for Business Transformation | Kellogg](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>) — official program page references CxDNA as the customer experience framework
+- [CxDNA module in program curriculum](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>) — module 2 (AI and customer experience management)

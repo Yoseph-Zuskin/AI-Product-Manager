@@ -7,7 +7,7 @@ tags:
 - framework
 - strategic-planning
 - product-vision
-resource: https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program
+resource: <https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>
 author: Mohanbir Sawhney
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
 ---
@@ -18,14 +18,12 @@ Strategic planning framework used in the Kellogg AI-Driven Product Strategy prog
 ## Five Components
 
 | Component | Purpose |
-|-----------|---------|
+| --- | --- |
 | **Vision** | Articulation of the end state — who the product aims to become and the value delivered |
 | **Values** | Core principles guiding decision-making and prioritization |
 | **Methods** | Specific approaches and frameworks to achieve the vision (e.g., Product Strategy Canvas) |
 | **Obstacles** | Anticipated challenges and barriers to overcome |
-| **Measures** | Metrics and hurdles for tracking progress and success |
-
-## Usage in AI-Driven Product Strategy Program
+| **Measures** | Quantifiable targets for tracking progress |
 
 - Crafting product vision and mission statements
 - Aligning strategy with corporate goals and organizational alignment
@@ -34,5 +32,5 @@ Strategic planning framework used in the Kellogg AI-Driven Product Strategy prog
 
 ## Sources
 
-- [AI-Driven Product Strategy | Kellogg](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program) — official program page referencing V2MOM framework
-- [V2MOM module in program curriculum](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program) — Module 1: Product Vision, Strategy and Leadership
+- [AI-Driven Product Strategy | Kellogg](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>) — official program page referencing V2MOM framework
+- [V2MOM module in program curriculum](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>) — Module 1: Product Vision, Strategy and Leadership

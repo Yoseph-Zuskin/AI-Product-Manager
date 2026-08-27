@@ -7,7 +7,7 @@ tags:
 - rww
 - framework
 - opportunity-discovery
-resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
+resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
 author: Mohanbir Sawhney
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
 ---
@@ -39,12 +39,10 @@ Customer-centric opportunity discovery frameworks used across both Kellogg Execu
 **Definition**: Market opportunity assessment framework evaluating opportunities on three criteria:
 
 | Criterion | Description |
-|-----------|-------------|
+| --- | --- |
 | **Real** | The problem actually exists in the market |
 | **Worth** | Customers value solving this problem |
-| **Win** | The company can realistically win in this market |
-
-## Application in AI-Driven Product Strategy
+| **Win** | We can win this opportunity |
 
 - Module 2 (Opportunity Analysis and Product Discovery) uses RWW to assess product opportunities
 - Combines with JTBD to structure opportunity briefs
@@ -52,5 +50,5 @@ Customer-centric opportunity discovery frameworks used across both Kellogg Execu
 
 ## Sources
 
-- [AI Strategies for Business Transformation | Kellogg](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program) — JTBD as enterprise-wide organizing framework
-- [AI-Driven Product Strategy | Kellogg](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program) — JTBD and RWW in Module 2 (Opportunity Analysis and Product Discovery)
+- [AI Strategies for Business Transformation | Kellogg](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>) — JTBD as enterprise-wide organizing framework
+- [AI-Driven Product Strategy | Kellogg](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>) — JTBD and RWW in Module 2 (Opportunity Analysis and Product Discovery)

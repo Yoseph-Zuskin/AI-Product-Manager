@@ -1,0 +1,61 @@
+// Qoder hooks for full plugin tier
+// Add this to your Qoder settings.json to enable automatic mode activation
+// and ruleset injection on every prompt.
+//
+// Example settings.json entry:
+// "hooks": {
+//   "UserPromptSubmit": [
+//     {
+//       "matcher": ".*",
+//       "hooks": [
+//         {
+//           "type": "command",
+//           "command": "node \"${PONYTAIL_DIR}/hooks/qoder-on-prompt.js\"",
+//           "timeout": 5
+//         }
+//       ]
+//     }
+//   ],
+//   "PreToolUse": [
+//     {
+//       "matcher": "task|Task",
+//       "hooks": [
+//         {
+//           "type": "command",
+//           "command": "node \"${PONYTAIL_DIR}/hooks/qoder-on-task.js\"",
+//           "timeout": 5
+//         }
+//       ]
+//     }
+//   ]
+// }
+
+// Replace PONYTAIL_DIR with the absolute path to your AI-PM bundle
+// The hooks below are examples - adapt the paths as needed
+
+{
+  "UserPromptSubmit": [
+    {
+      "matcher": ".*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node \"${AI_PM_DIR}/hooks/on-prompt.js\"",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "PreToolUse": [
+    {
+      "matcher": "task|Task",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "node \"${AI_PM_DIR}/hooks/on-task.js\"",
+          "timeout": 5
+        }
+      ]
+    }
+  ]
+}
