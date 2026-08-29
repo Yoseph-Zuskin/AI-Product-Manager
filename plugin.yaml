@@ -1,0 +1,56 @@
+name: ai-product-manager
+version: 0.1.0
+description: AI Product Manager knowledge kit for Codex - synthesizes AI Strategies & AI-Driven Product Strategy into actionable PM skills
+author: Yoseph-Zuskin
+homepage: https://github.com/Yoseph-Zuskin/ai-product-manager
+repository: https://github.com/Yoseph-Zuskin/ai-product-manager
+license: MIT
+keywords:
+  - codex
+  - plugin
+  - ai
+  - product-management
+  - ml
+  - pm
+entry: skills/ai-pm-index
+okf:
+  abstracts: https://github.com/Yoseph-Zuskin/okf-abstracts
+  version: v0.1.0
+skills:
+  - ai-pm-index
+  - ai-pm-get-context
+  - ai-pm-discover
+  - ai-pm-design
+  - ai-pm-architect
+  - ai-pm-govern
+  - ai-pm-team
+  - ai-pm-research
+  - ai-pm-price
+  - ai-pm-grow
+  - ai-pm-communicate
+  - ai-pm-vision
+  - ai-pm-audit
+hooks:
+  - onPrompt
+  - onTask
+commands:
+  ai-pm: commands/ai-pm.js
+references:
+  - references/machine-learning-algorithm.md
+  - references/business-department.md
+  - references/persona.md
+  - references/software-system.md
+  - references/architecture-pattern.md
+  - references/security-control.md
+  - references/identity-provider.md
+  - references/software-development-lifecycle.md
+  - references/cloud-infrastructure.md
+  - references/on-premise-infrastructure.md
+agents:
+  - agents/ai-pm.md
+templates:
+  - templates/adr-template.md
+  - templates/model-card-template.md
+  - templates/prd-template.md
+  - templates/raci-template.md
+  - templates/postmortem-template.md
