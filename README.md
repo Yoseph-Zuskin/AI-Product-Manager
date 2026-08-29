@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/Yoseph-Zuskin/AI-Product-Manager?style=flat-square&color=6366F1&label=release" alt="Release">
+  <img src="https://img.shields.io/github/v/tag/Yoseph-Zuskin/AI-Product-Manager?style=flat-square&color=6366F1&label=version" alt="Version">
   <img src="https://img.shields.io/github/license/Yoseph-Zuskin/AI-Product-Manager?style=flat-square&color=6366F1" alt="License">
   <img src="https://img.shields.io/badge/works%20with-13%20agents-6366F1?style=flat-square" alt="Works with 13 agents">
   <img src="https://img.shields.io/badge/OKF-v0.2-6366F1?style=flat-square" alt="OKF v0.2">
