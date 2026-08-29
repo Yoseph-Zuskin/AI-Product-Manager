@@ -1,4 +1,5 @@
 ---
+name: ai-pm-communicate
 type: Concept
 title: Strategic Communication Skill
 description: Masters strategic communication, influence without authority, and storytelling for AI product managers — aligning stakeholders, driving decisions, and building trust.

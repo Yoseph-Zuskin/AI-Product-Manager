@@ -1,4 +1,5 @@
 ---
+name: ai-pm-index
 type: Concept
 title: AI Product Manager Skill Router
 description: Routes user requests to the appropriate AI Product Manager skill based on the task type and context.

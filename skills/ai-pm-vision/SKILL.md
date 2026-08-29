@@ -1,4 +1,5 @@
 ---
+name: ai-pm-vision
 type: Concept
 title: Product Vision Skill
 description: Defines and communicates compelling product vision — north star articulation, V2MOM framework, strategy canvas, and AI-era vision that anchors teams on problem-focused north star.

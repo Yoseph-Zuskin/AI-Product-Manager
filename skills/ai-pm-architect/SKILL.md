@@ -1,4 +1,5 @@
 ---
+name: ai-pm-architect
 type: Concept
 title: AI Architect Skill
 description: Makes and documents architectural decisions for AI products — ML paradigm selection, system topology, infrastructure choices, deployment patterns, and ML-specific architectural concerns.

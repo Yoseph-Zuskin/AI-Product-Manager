@@ -1,4 +1,5 @@
 ---
+name: ai-pm-grow
 type: Concept
 title: Grow Skill
 description: Drives product-led growth, retention, and expansion loops — from activation to advocacy, with AI as force multiplier.

@@ -16,26 +16,7 @@
     "planning",
     "roadmap"
   ],
-  "entry": "skills/ai-pm-index",
-  "skills": [
-    "ai-pm-index",
-    "ai-pm-get-context",
-    "ai-pm-discover",
-    "ai-pm-design",
-    "ai-pm-architect",
-    "ai-pm-govern",
-    "ai-pm-team",
-    "ai-pm-research",
-    "ai-pm-price",
-    "ai-pm-grow",
-    "ai-pm-communicate",
-    "ai-pm-vision",
-    "ai-pm-audit"
-  ],
-  "okf": {
-    "abstracts": "https://github.com/Yoseph-Zuskin/okf-abstracts",
-    "version": "v0.1.0"
-  },
+  "skills": "skills",
   "interface": {
     "displayName": "AI Product Manager",
     "shortDescription": "AI-powered product strategy and roadmap planning",

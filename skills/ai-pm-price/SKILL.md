@@ -1,4 +1,5 @@
 ---
+name: ai-pm-price
 type: Concept
 title: Pricing Strategy Skill
 description: Defines pricing strategy, monetization models, packaging, and value capture frameworks for AI products.

@@ -1,4 +1,5 @@
 ---
+name: ai-pm-govern
 type: Concept
 title: ML Model Governance Skill
 description: Establishes and operates governance frameworks for ML models across their lifecycle — from development through deployment, monitoring, and retirement — ensuring compliance, accountability, and responsible AI practices.
