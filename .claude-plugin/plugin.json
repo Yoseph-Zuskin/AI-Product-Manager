@@ -49,5 +49,6 @@
   "okf": {
     "abstracts": "https://github.com/Yoseph-Zuskin/okf-abstracts",
     "version": "v0.1.0"
-  }
+  },
+  "hooks": "./hooks/claude-codex-hooks.json"
 }
