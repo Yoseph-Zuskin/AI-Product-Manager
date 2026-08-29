@@ -2,8 +2,20 @@
   "name": "ai-product-manager",
   "version": "0.1.0",
   "description": "AI Product Manager knowledge kit for Codex - synthesizes AI Strategies & AI-Driven Product Strategy into actionable PM skills",
-  "author": "Yoseph-Zuskin",
+  "author": {
+    "name": "Yoseph-Zuskin",
+    "url": "https://github.com/Yoseph-Zuskin"
+  },
+  "homepage": "https://github.com/Yoseph-Zuskin/ai-product-manager",
+  "repository": "https://github.com/Yoseph-Zuskin/ai-product-manager",
   "license": "MIT",
+  "keywords": [
+    "product-strategy",
+    "ai",
+    "product-management",
+    "planning",
+    "roadmap"
+  ],
   "entry": "skills/ai-pm-index",
   "skills": [
     "ai-pm-index",
@@ -20,34 +32,33 @@
     "ai-pm-vision",
     "ai-pm-audit"
   ],
-  "references": [
-    "references/machine-learning-algorithm.md",
-    "references/business-department.md",
-    "references/persona.md",
-    "references/software-system.md",
-    "references/architecture-pattern.md",
-    "references/security-control.md",
-    "references/identity-provider.md",
-    "references/software-development-lifecycle.md",
-    "references/cloud-infrastructure.md",
-    "references/on-premise-infrastructure.md"
-  ],
-  "agents": [
-    "agents/ai-pm.md"
-  ],
-  "templates": [
-    "templates/adr-template.md",
-    "templates/model-card-template.md",
-    "templates/prd-template.md",
-    "templates/raci-template.md",
-    "templates/postmortem-template.md"
-  ],
-  "scripts": [
-    "scripts/get-context.sh",
-    "scripts/validate-adr.sh"
-  ],
   "okf": {
     "abstracts": "https://github.com/Yoseph-Zuskin/okf-abstracts",
     "version": "v0.1.0"
+  },
+  "interface": {
+    "displayName": "AI Product Manager",
+    "shortDescription": "AI-powered product strategy and roadmap planning",
+    "longDescription": "Use AI Product Manager to synthesize AI product strategy frameworks, create roadmaps, define user personas, conduct discovery, design products, architect AI solutions, govern ML models, and communicate stakeholder vision. Built on Professor Mohan Sawhney's online certificate programs.",
+    "developerName": "Yoseph-Zuskin",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/Yoseph-Zuskin/ai-product-manager",
+    "privacyPolicyURL": "https://github.com/Yoseph-Zuskin/ai-product-manager/blob/main/privacy.md",
+    "termsOfServiceURL": "https://github.com/Yoseph-Zuskin/ai-product-manager/blob/main/terms.md",
+    "defaultPrompt": [
+      "Help me create a product strategy for my AI-powered feature",
+      "Generate a roadmap for my product",
+      "Define user personas for my product",
+      "Conduct product discovery for a new AI feature"
+    ],
+    "brandColor": "#6366F1",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png",
+    "screenshots": []
   }
 }
