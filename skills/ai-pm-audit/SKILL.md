@@ -1,6 +1,7 @@
 ---
 name: ai-pm-audit
-type: Concept
+displayName: AI PM Audit
+type: Skill
 title: Product Audit Skill
 description: Conducts structured product audits — UX/design reviews, responsible AI/bias checks, technical debt assessment, and ML model health evaluations.
 subtypes_of:

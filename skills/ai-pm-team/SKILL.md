@@ -1,6 +1,7 @@
 ---
 name: ai-pm-team
-type: Concept
+displayName: AI PM Team
+type: Skill
 title: Cross-Functional AI Team Skill
 description: Defines team topology, collaboration rhythms, and decision rights for effective AI product development across business, engineering, data, design, and compliance functions.
 subtypes_of:

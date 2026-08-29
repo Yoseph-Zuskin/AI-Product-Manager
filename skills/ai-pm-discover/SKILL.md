@@ -1,6 +1,7 @@
 ---
 name: ai-pm-discover
-type: Concept
+displayName: AI PM Discover
+type: Skill
 title: Product Discovery Skill
 description: Executes product discovery workflows — JTBD framing, opportunity analysis, hypothesis testing, and opportunity sizing.
 subtypes_of:

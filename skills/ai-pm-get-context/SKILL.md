@@ -1,6 +1,7 @@
 ---
 name: ai-pm-get-context
-type: Concept
+displayName: AI PM Get Context
+type: Skill
 title: Get Context Skill
 description: Loads product context, saved references, and OKF concept references into the agent's working memory before any other skill executes.
 subtypes_of:

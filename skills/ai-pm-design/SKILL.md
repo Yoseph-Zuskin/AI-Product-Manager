@@ -1,6 +1,7 @@
 ---
 name: ai-pm-design
-type: Concept
+displayName: AI PM Design
+type: Skill
 title: Product Design Skill
 description: Executes product design workflows — user stories, wireframes, prototyping, MVP/MVX definition, and agile delivery setup.
 subtypes_of:

@@ -1,6 +1,7 @@
 ---
 name: ai-pm-research
-type: Concept
+displayName: AI PM Research
+type: Skill
 title: User Research Skill
 description: Executes user research workflows — qualitative and quantitative methods, competitive analysis, win/loss analysis, and continuous discovery habits.
 subtypes_of:

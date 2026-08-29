@@ -41,6 +41,5 @@
     "composerIcon": "./assets/logo.png",
     "logo": "./assets/logo.png",
     "screenshots": []
-  },
-  "hooks": "./hooks/claude-codex-hooks.json"
+  }
 }
