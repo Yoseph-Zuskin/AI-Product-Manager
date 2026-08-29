@@ -1,0 +1,37 @@
+# CODEOWNERS
+# These users/teams will be requested for review when someone opens a PR
+# matching the patterns below.
+
+# Global - all changes require review from Yoseph-Zuskin
+* @Yoseph-Zuskin
+
+# Manifest and plugin config files - require review
+*.json @Yoseph-Zuskin
+*.yaml @Yoseph-Zuskin
+*.yml @Yoseph-Zuskin
+
+# Plugin manifest files
+.codex-plugin/plugin.json @Yoseph-Zuskin
+.claude-plugin/plugin.json @Yoseph-Zuskin
+.devin-plugin/plugin.json @Yoseph-Zuskin
+.grok-plugin/plugin.json @Yoseph-Zuskin
+.qoder-plugin/plugin.json @Yoseph-Zuskin
+.openclaw/skills/ai-pm/manifest.json @Yoseph-Zuskin
+
+# Core plugin files
+plugin.json @Yoseph-Zuskin
+plugin.yaml @Yoseph-Zuskin
+package.json @Yoseph-Zuskin
+VERSION @Yoseph-Zuskin
+CHANGELOG.md @Yoseph-Zuskin
+
+# Skills and concepts
+skills/ @Yoseph-Zuskin
+concepts/ @Yoseph-Zuskin
+
+# Documentation
+README.md @Yoseph-Zuskin
+CHANGELOG.md @Yoseph-Zuskin
+privacy.md @Yoseph-Zuskin
+terms.md @Yoseph-Zuskin
+AGENTS.md @Yoseph-Zuskin
