@@ -169,6 +169,10 @@ AI-Product-Manager/
 - `verified`: human entry plus agent entries (append on each review)
 - `role_assignments`: data-owners, platform-admins-devops, governance-reps-legal-infosec, solution-architects
 
+## Contribution Guide
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the complete contribution workflow, development setup, commit conventions, gates, harness parity, MCP, and release process.
+
 ## Handoff Protocol
 
 When routing, acknowledge:

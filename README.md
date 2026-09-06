@@ -20,7 +20,7 @@
 
 ---
 
-AI Product Manager is a Codex/ChatGPT plugin that puts a synthesized AI product strategy practice inside your agent. It distills two Kellogg Executive Education certificate programs—**AI Strategies for Business Transformations** and **AI-Driven Product Strategy** (Professor Mohan Sawhney)—into an actionable, agent-ready knowledge bundle with 19 workflow skills, 21 concepts, and 11 templates.
+AI Product Manager is a Codex/ChatGPT plugin that puts a **cited synthesis of private educational materials and public web knowledge** inside your agent. It distills two Kellogg Executive Education certificate programs—**AI Strategies for Business Transformations** and **AI-Driven Product Strategy** (Professor Mohan Sawhney)—into an actionable, agent-ready knowledge bundle with 19 workflow skills, 21 concepts, and 11 templates.
 
 ## What it does
 
@@ -140,7 +140,7 @@ The plugin includes an **OKF v0.2** knowledge bundle:
 - **11 templates** — PRD, ADR, RACI, Postmortem, Model Card, and others
 - **Provenance** — Every concept cites sources from the two Kellogg programs
 
-All content is synthesized from Professor Mohan Sawhney's Kellogg Executive Education materials (personal educational use per Emeritus terms).
+All content is **based on cited synthesis of private educational materials and public web knowledge** (not verbatim transcripts). Sources from the two Kellogg programs are cited via `[^p1-xxx]` footnotes — proper scholarly attribution, not copying.
 
 ## Harness Compatibility
 
@@ -188,17 +188,7 @@ The MIT license applies to the plugin code, skills, templates, and synthesized c
 
 ## Contributing
 
-This is a personal knowledge bundle. Issues and PRs welcome for bug fixes and improvements. For major changes, open an issue first.
-
-Before submitting, validate your change the same way releases are judged:
-
-1. Mechanical gates (from the bundle root, with `okf-abstracts` checked out beside it):
-   `validate_subtype.py --strict`, `check_consistency.py`, `check_links.py`, `check_newlines.py`
-2. Adversarial review: run the [OKF Adversarial Review](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/skills/okf-adversarial-review/SKILL.md)
-   skill against your bundle. It judges what validators cannot (true is-a links,
-   contract quality, IP posture) and reports BLOCKING vs ADVISORY with a release
-   verdict. Address every BLOCKING flag before submitting. New synthesis ships as
-   `status: draft` until human-reviewed; only the owner promotes to `stable`.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the complete contribution workflow, development setup, commit conventions, gates, harness parity, MCP, and release process.
 
 ## Changelog
 
