@@ -1,13 +1,13 @@
 {
   "name": "ai-product-manager",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AI Product Manager knowledge kit for Codex - synthesizes AI Strategies & AI-Driven Product Strategy into actionable PM skills",
   "author": {
-    "name": "Yoseph-Zuskin",
+    "name": "Yoseph Zuskin",
     "url": "https://github.com/Yoseph-Zuskin"
   },
-  "homepage": "https://github.com/Yoseph-Zuskin/ai-product-manager",
-  "repository": "https://github.com/Yoseph-Zuskin/ai-product-manager",
+  "homepage": "https://www.github.com/Yoseph-Zuskin/ai-product-manager",
+  "repository": "https://www.github.com/Yoseph-Zuskin/ai-product-manager",
   "license": "MIT",
   "keywords": [
     "product-strategy",
@@ -21,16 +21,16 @@
     "displayName": "AI Product Manager",
     "shortDescription": "AI-powered product strategy and roadmap planning",
     "longDescription": "Use AI Product Manager to synthesize AI product strategy frameworks, create roadmaps, define user personas, conduct discovery, design products, architect AI solutions, govern ML models, and communicate stakeholder vision. Built on Professor Mohan Sawhney's online certificate programs.",
-    "developerName": "Yoseph-Zuskin",
+    "developerName": "Yoseph Zuskin",
     "category": "Productivity",
     "capabilities": [
       "Interactive",
       "Read",
       "Write"
     ],
-    "websiteURL": "https://github.com/Yoseph-Zuskin/ai-product-manager",
-    "privacyPolicyURL": "https://github.com/Yoseph-Zuskin/ai-product-manager/blob/main/privacy.md",
-    "termsOfServiceURL": "https://github.com/Yoseph-Zuskin/ai-product-manager/blob/main/terms.md",
+    "websiteURL": "https://www.github.com/Yoseph-Zuskin/ai-product-manager",
+    "privacyPolicyURL": "https://www.github.com/Yoseph-Zuskin/ai-product-manager/blob/v0.1.1/privacy.md",
+    "termsOfServiceURL": "https://www.github.com/Yoseph-Zuskin/ai-product-manager/blob/v0.1.1/terms.md",
     "defaultPrompt": [
       "Help me create a product strategy for my AI-powered feature",
       "Generate a roadmap for my product",
@@ -40,6 +40,7 @@
     "brandColor": "#6366F1",
     "composerIcon": "./assets/logo.png",
     "logo": "./assets/logo.png",
+    "logoDark": "./assets/logo.png",
     "screenshots": []
   }
 }

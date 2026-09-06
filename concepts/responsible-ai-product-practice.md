@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: Policy
 title: Responsible AI Product Practice
 description: A practical framework for embedding responsible AI principles — fairness, transparency, accountability, privacy, and safety — into the AI product lifecycle from discovery through deployment and monitoring.
 tags:
@@ -11,36 +11,35 @@ tags:
 - privacy
 - safety
 - synthesis
-subtypes_of:
-- { type: Concept, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/foundational/concept.md>, version: v0.1.0 }
-- { type: Machine Learning Algorithm, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/machine-learning-algorithm.md>, version: v0.1.0 }
-- { type: Security Control, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/security-control.md>, version: v0.1.0 }
-- { type: Identity Provider, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/identity-provider.md>, version: v0.1.0 }
-- { type: Persona, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>, version: v0.1.0 }
-- { type: Business Department, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>, version: v0.1.0 }
+subtype_of:
+- { type: Policy, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/policy.md, version: v0.1.0 }
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:20:00Z' }
 verified:
 - { by: human:yoseph-zuskin, at: '2026-08-19T12:25:00Z' }
 - { by: opencode/deepseek-v4-flash-free, at: '2026-08-19T12:26:00Z' }
 - { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T16:40:30Z' }
+- { by: opencode/muse-spark-1.3-free, at: '2026-09-05T18:11:16Z' }
 status: stable
 stale_after: 2027-08-19
 sources:
+- id: ai-pm-synthesis
+  title: Original AI-PM synthesis bridging both certificate programs
+  resource: https://www.github.com/Yoseph-Zuskin/AI-Product-Manager
 - id: r-machine-learning-algorithm
   title: Machine Learning Algorithm
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/machine-learning-algorithm.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/machine-learning-algorithm.md
 - id: r-security-control
   title: Security Control
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/security-control.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/security-control.md
 - id: r-identity-provider
   title: Identity Provider
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/identity-provider.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/identity-provider.md
 - id: r-persona
   title: Persona
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md
 - id: r-business-department
   title: Business Department
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/business-department.md
 ---
 # Responsible AI Product Practice
 
@@ -48,6 +47,10 @@ Responsible AI is not a compliance checkbox — it is a product discipline that
 must be designed into every stage of the AI product lifecycle. This concept
 provides a practical framework for AI Product Managers to embed responsibility
 into discovery, development, deployment, and monitoring.
+
+## Definition
+
+A framework for embedding responsible AI practices throughout the product lifecycle. Covers bias/fairness assessment, transparency/explainability, privacy by design, accountability structures, and regulatory compliance (EU AI Act, etc.). Includes audit checklists and governance templates.
 
 ## Five Pillars of Responsible AI
 
@@ -149,13 +152,19 @@ into discovery, development, deployment, and monitoring.
 
 [^r-machine-learning-algorithm][^r-security-control][^r-business-department][^r-persona]
 
+## Provenance
+
+Original AI-PM synthesis bridging both certificate programs[^ai-pm-synthesis].
+
 ## Sources
 
-[^r-machine-learning-algorithm]: [Machine Learning Algorithm](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/machine-learning-algorithm.md>)
-[^r-security-control]: [Security Control](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/security-control.md>)
-[^r-identity-provider]: [Identity Provider](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/identity-provider.md>)
-[^r-persona]: [Persona](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>)
-[^r-business-department]: [Business Department](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>)
+[^r-machine-learning-algorithm]: [Machine Learning Algorithm](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/machine-learning-algorithm.md)
+
+[^r-security-control]: [Security Control](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/security-control.md)
+[^r-identity-provider]: [Identity Provider](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/identity-provider.md)
+
+[^r-persona]: [Persona](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md)
+[^r-business-department]: [Business Department](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/business-department.md)
 
 ## Extensions
 
@@ -168,3 +177,5 @@ Placeholder for organization-specific responsible AI policy, sector-specific gui
 * [AI Architecture Decisions](/concepts/ai-architecture-decisions.md)
 * [Cross-Functional AI Team](/concepts/cross-functional-ai-team.md)
 * [AI Product Deployment](/concepts/ai-product-deployment.md)
+
+[^ai-pm-synthesis]: Original synthesis for this bundle, drawing on both programs; see [ai-product-manager.md](../ai-product-manager.md).

@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: Operational Artifact
 title: AI Architecture Decisions
 description: A framework for making and documenting architectural decisions in AI products — bridging ML algorithm selection, system architecture patterns, infrastructure choices, and organizational constraints.
 tags:
@@ -9,40 +9,43 @@ tags:
 - software-architecture
 - decision-making
 - synthesis
-subtypes_of:
-- { type: Concept, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/foundational/concept.md>, version: v0.1.0 }
-- { type: Architecture Pattern, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/architecture-pattern.md>, version: v0.1.0 }
-- { type: Machine Learning Algorithm, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/machine-learning-algorithm.md>, version: v0.1.0 }
-- { type: Software System, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-system.md>, version: v0.1.0 }
-- { type: Cloud Infrastructure, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/cloud-infrastructure.md>, version: v0.1.0 }
-- { type: On-Premise Infrastructure, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/on-premise-infrastructure.md>, version: v0.1.0 }
+subtype_of:
+- { type: Operational Artifact, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/core/operational-artifact.md, version: v0.1.0 }
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:20:00Z' }
 verified:
 - { by: human:yoseph-zuskin, at: '2026-08-19T12:25:00Z' }
 - { by: opencode/deepseek-v4-flash-free, at: '2026-08-19T12:26:00Z' }
 - { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T16:40:30Z' }
+- { by: opencode/muse-spark-1.3-free, at: '2026-09-05T18:11:16Z' }
 status: stable
 stale_after: 2027-08-19
 sources:
+- id: ai-pm-synthesis
+  title: Original AI-PM synthesis bridging both certificate programs
+  resource: https://www.github.com/Yoseph-Zuskin/AI-Product-Manager
 - id: r-architecture-pattern
   title: Architecture Pattern
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/architecture-pattern.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/architecture-pattern.md
 - id: r-machine-learning-algorithm
   title: Machine Learning Algorithm
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/machine-learning-algorithm.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/machine-learning-algorithm.md
 - id: r-software-system
   title: Software System
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-system.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-system.md
 - id: r-cloud-infrastructure
   title: Cloud Infrastructure
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/cloud-infrastructure.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/cloud-infrastructure.md
 - id: r-on-premise-infrastructure
   title: On-Premise Infrastructure
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/on-premise-infrastructure.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/on-premise-infrastructure.md
 ---
 # AI Architecture Decisions
 
 AI products require architectural decisions that span ML algorithm selection, system topology, infrastructure topology, and organizational boundaries. This concept provides a structured approach to making and documenting these decisions using Architecture Decision Records (ADRs) adapted for AI-specific concerns.
+
+## Definition
+
+A structured framework for making and documenting architectural decisions in AI products, bridging ML algorithm selection, system architecture patterns, infrastructure choices, and organizational constraints. This concept provides a systematic approach using Architecture Decision Records (ADRs) adapted for AI-specific concerns across ML paradigm selection, system topology, infrastructure choices, and deployment patterns.
 
 ## Decision Categories
 
@@ -146,13 +149,19 @@ The AI Product Manager facilitates but doesn't dictate:
 - Document decisions in ADR log for organizational learning
 - Revisit decisions at each major milestone (data change, scale change, regulation change)
 
+## Provenance
+
+Original AI-PM synthesis bridging both certificate programs[^ai-pm-synthesis].
+
 ## Sources
 
-[^r-architecture-pattern]: [Architecture Pattern](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/architecture-pattern.md>)
-[^r-machine-learning-algorithm]: [Machine Learning Algorithm](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/machine-learning-algorithm.md>)
-[^r-software-system]: [Software System](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-system.md>)
-[^r-cloud-infrastructure]: [Cloud Infrastructure](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/cloud-infrastructure.md>)
-[^r-on-premise-infrastructure]: [On-Premise Infrastructure](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/on-premise-infrastructure.md>)
+[^r-architecture-pattern]: [Architecture Pattern](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/architecture-pattern.md)
+
+[^r-machine-learning-algorithm]: [Machine Learning Algorithm](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/machine-learning-algorithm.md)
+[^r-software-system]: [Software System](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-system.md)
+
+[^r-cloud-infrastructure]: [Cloud Infrastructure](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/cloud-infrastructure.md)
+[^r-on-premise-infrastructure]: [On-Premise Infrastructure](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/on-premise-infrastructure.md)
 
 ## Extensions
 
@@ -165,3 +174,5 @@ Placeholder for organization-specific ADR templates, approved pattern library, a
 * [ML Model Governance](../concepts/ml-model-governance.md)
 * [Cross-Functional AI Team](../concepts/cross-functional-ai-team.md)
 * [Responsible AI Product Practice](../concepts/responsible-ai-product-practice.md)
+
+[^ai-pm-synthesis]: Original synthesis for this bundle, drawing on both programs; see [ai-product-manager.md](../ai-product-manager.md).

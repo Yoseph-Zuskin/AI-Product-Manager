@@ -1,0 +1,50 @@
+# Pre-commit hooks for AI-Product-Manager. Install: pip install pre-commit →
+# pre-commit install. Markdown is linted WITHOUT --fix (autofix has caused
+# whitespace damage; run markdownlint-cli2 --fix by hand on single files only).
+# OKF gates assume the documented workspace layout (okf-abstracts beside this
+# repo); they fail loudly if the sibling is absent rather than passing silent.
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      # .gitignore is owner-managed; hygiene hooks must not touch it
+      - id: trailing-whitespace
+        exclude: ^\.gitignore$
+      - id: end-of-file-fixer
+        exclude: ^\.gitignore$
+      - id: check-json
+        exclude: qoder-hooks\.json$
+      - id: check-yaml
+      - id: check-merge-conflict
+  - repo: local
+    hooks:
+      - id: markdownlint
+        name: markdownlint (lint-only, never autofix)
+        entry: npx --yes markdownlint-cli2
+        language: system
+        types: [markdown]
+        exclude: (^|/)README\.md$
+      - id: okf-validate
+        name: OKF subtype validation (strict)
+        entry: python ../okf-abstracts/scripts/validate_subtype.py . --abstracts-repo ../okf-abstracts --strict
+        language: system
+        pass_filenames: false
+        files: \.(md|py)$
+      - id: okf-consistency
+        name: OKF consistency checks
+        entry: python ../okf-abstracts/scripts/check_consistency.py .
+        language: system
+        pass_filenames: false
+        files: \.(md|json)$
+      - id: okf-links
+        name: OKF internal link check
+        entry: python ../okf-abstracts/scripts/check_links.py .
+        language: system
+        pass_filenames: false
+        files: \.md$
+      - id: okf-newlines
+        name: OKF trailing-newline check
+        entry: python ../okf-abstracts/scripts/check_newlines.py .
+        language: system
+        pass_filenames: false
+        files: \.md$

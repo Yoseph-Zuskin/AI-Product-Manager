@@ -1,14 +1,19 @@
 ---
-type: Template
+type: Reference
 title: AI Canvas 2.0 Framework
 description: Strategic framework for planning AI initiatives developed by Kellogg School of Management, consisting of three phases (Define/Design/Deploy) with 10 narrative questions and 9 blueprint cells.
+verified: []
 tags:
 - ai-canvas
 - framework
 - ai-strategy
 - planning
-resource: <https://kdacapabilities.com/ai-workflows/ai-canvas/>
+resource: https://kdacapabilities.com/ai-workflows/ai-canvas/
 author: Mohanbir Sawhney
+subtype_of:
+- { type: Reference, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/reference.md, version: v0.1.0 }
+status: draft
+stale_after: 2027-08-19
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
 ---
 # AI Canvas 2.0 Framework
@@ -39,5 +44,5 @@ Consists of three phases across nine cells:
 
 ## Sources
 
-- [AI Canvas 2.0 | KDA Capabilities](<https://kdacapabilities.com/ai-workflows/ai-canvas/>) — interactive public explanation
-- [AI Strategies for Business Transformation | Kellogg](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformation-program>) — official program page citing AI Canvas 2.0
+- [AI Canvas 2.0 | KDA Capabilities](https://kdacapabilities.com/ai-workflows/ai-canvas/) — interactive public explanation
+- [AI Strategies for Business Transformation | Kellogg](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformation-program) — official program page citing AI Canvas 2.0

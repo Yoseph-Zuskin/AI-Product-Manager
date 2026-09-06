@@ -1,12 +1,9 @@
 {
   "name": "ai-product-manager",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AI Product Manager knowledge kit for Codex - synthesizes AI Strategies & AI-Driven Product Strategy into actionable PM skills",
   "main": "skills/ai-pm-index/SKILL.md",
-  "scripts": {
-    "validate": "node scripts/validate.js",
-    "test": "echo \"No tests yet\""
-  },
+  "scripts": {},
   "keywords": [
     "codex",
     "plugin",
@@ -19,12 +16,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yoseph-Zuskin/ai-product-manager"
+    "url": "https://www.github.com/Yoseph-Zuskin/ai-product-manager"
   },
   "bugs": {
-    "url": "https://github.com/Yoseph-Zuskin/ai-product-manager/issues"
+    "url": "https://www.github.com/Yoseph-Zuskin/ai-product-manager/issues"
   },
-  "homepage": "https://github.com/Yoseph-Zuskin/ai-product-manager#readme",
+  "homepage": "https://www.github.com/Yoseph-Zuskin/ai-product-manager#readme",
   "engines": {
     "node": ">=18.0.0"
   },
@@ -41,8 +38,12 @@
     "ai-pm-grow",
     "ai-pm-communicate",
     "ai-pm-vision",
-    "ai-pm-audit"
-  ],
-  "dependencies": {},
-  "devDependencies": {}
+    "ai-pm-audit",
+    "ai-pm-evals",
+    "ai-pm-platform",
+    "ai-pm-models",
+    "ai-pm-business-case",
+    "ai-pm-vendor",
+    "ai-pm-transform"
+  ]
 }

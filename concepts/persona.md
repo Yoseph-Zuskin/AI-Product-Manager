@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: Knowledge Artifact
 title: Persona
 description: A synthesis concept wrapping the abstract Persona class from okf-abstracts with an AI-PM-specific methodology — the persona-as-hypothesis framing, JTBD coupling, AI-literacy attribute, and lifecycle-stage tagging that the two Kellogg programs use to make personas actionable for AI products.
 tags:
@@ -9,52 +9,52 @@ tags:
 - jtbd
 - methodology
 - synthesis
-subtypes_of:
-- { type: Persona, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>, version: v0.1.0 }
-- { type: Concept, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/foundational/concept.md>, version: v0.1.0 }
+subtype_of:
+- { type: Knowledge Artifact, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/core/knowledge-artifact.md, version: v0.1.0 }
 generated: { by: human:yoseph-zuskin, at: '2026-08-23T19:30:00Z' }
 verified:
 - { by: human:yoseph-zuskin, at: '2026-08-23T19:35:00Z' }
 - { by: opencode/deepseek-v4-flash-free, at: '2026-08-23T19:36:00Z' }
 - { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T19:37:00Z' }
+- { by: opencode/muse-spark-1.3-free, at: '2026-09-05T18:11:16Z' }
 status: stable
 stale_after: 2027-08-19
 sources:
 - id: p2-jtbd
   title: 'AI-Driven Product Strategy: JTBD for finding and prioritizing product opportunities'
-  resource: <https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>
+  resource: https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program
   author: human:mohan-sawhney
 - id: p1-customer-experience
   title: 'AI Strategies: Customer Experience DNA across the customer life cycle'
-  resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
+  resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
   author: human:mohan-sawhney
 - id: r-persona
   title: Persona
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md
 - id: public-cooper-personas
   title: 'The Inmates Are Running the Asylum: Why High Tech Products Drive Us Crazy and How to Restore the Sanity'
   author: human:alan-cooper
-  resource: <https://www.cooper.com/journal/the-inmates-are-running-the-asylum-2nd-edition>
+  resource: https://www.cooper.com/journal/the-inmates-are-running-the-asylum-2nd-edition
   year: 2004
 - id: public-christensen-jtbd
   title: 'Competing Against Luck: The Story of Innovation and Customer Choice'
   author: human:clayton-christensen
-  resource: <https://www.harpercollins.com/products/competing-against-luck-clayton-m-christensen>
+  resource: https://www.harpercollins.com/products/competing-against-luck-clayton-m-christensen
   year: 2016
 - id: public-long-ai-literacy
   title: 'What is AI Literacy? Competencies and Design Considerations'
   author: human:duri-long
-  resource: <https://dl.acm.org/doi/10.1145/3411764.3445100>
+  resource: https://dl.acm.org/doi/10.1145/3411764.3445100
   year: 2020
 - id: public-amershi-hai
   title: 'Guidelines for Human-AI Interaction (CHI 2019)'
   author: human:saleema-amershi
-  resource: <https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/>
+  resource: https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/
   year: 2019
 - id: public-prasad-consent
   title: 'Privacy Personas: Aiding User-Facing Privacy Work with a User-Centered Persona Model'
   author: human:ashwini-prasad
-  resource: <https://dl.acm.org/doi/10.1145/3544548.3581102>
+  resource: https://dl.acm.org/doi/10.1145/3544548.3581102
   year: 2023
 ---
 # Persona (AI-PM Synthesis)
@@ -64,6 +64,10 @@ class. Where the abstract class describes a persona as a fictional
 representation of a target user or customer segment, this concept pins
 down the methodology the two Kellogg programs use to make personas
 operationally useful for AI products[^r-persona][^p2-jtbd].
+
+## Definition
+
+A detailed representation of a user or stakeholder archetype. Captures demographics, goals, motivations, pain points, behaviors, and context. Used for product discovery, design, and communication. Includes functional, emotional, and social job dimensions per Jobs-to-be-Done theory.
 
 ## The methodology (course-sourced)
 
@@ -137,14 +141,18 @@ persona cannot carry the design implications across that range[^p1-customer-expe
 
 ## Sources
 
-[^p2-jtbd]: [AI-Driven Product Strategy](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>)
-[^p1-customer-experience]: [AI Strategies for Business Transformations](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>)
-[^r-persona]: [Persona](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>)
-[^public-cooper-personas]: [The Inmates Are Running the Asylum](<https://www.cooper.com/journal/the-inmates-are-running-the-asylum-2nd-edition>) (Cooper, 2004) — the canonical book on interaction-design personas; treats the persona as a behavior-predictive design tool rather than a demographic stereotype.
-[^public-christensen-jtbd]: [Competing Against Luck](<https://www.harpercollins.com/products/competing-against-luck-clayton-m-christensen>) (Christensen et al., 2016) — the canonical JTBD-in-product-strategy book; grounds the "persona captures the job" framing.
-[^public-long-ai-literacy]: [What is AI Literacy? Competencies and Design Considerations (CHI 2020)](<https://dl.acm.org/doi/10.1145/3411764.3445100>) (Long & Magerko, 2020) — the canonical paper on AI literacy as a measurable user attribute.
-[^public-amershi-hai]: [Guidelines for Human-AI Interaction (CHI 2019)](<https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/>) (Amershi et al., 2019) — formalizes the implication that a user encountering an AI alone needs visible confidence, limitations, and override paths.
-[^public-prasad-consent]: [Privacy Personas (CHI 2023)](<https://dl.acm.org/doi/10.1145/3544548.3581102>) (Prasad et al., 2023) — the user-centered persona model for data-sharing and consent, which the AI-PM synthesis adopts as the "consent posture" attribute.
+[^p2-jtbd]: [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
+
+[^p1-customer-experience]: [AI Strategies for Business Transformations](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
+[^r-persona]: [Persona](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md)
+
+[^public-cooper-personas]: [The Inmates Are Running the Asylum](https://www.cooper.com/journal/the-inmates-are-running-the-asylum-2nd-edition) (Cooper, 2004) — the canonical book on interaction-design personas; treats the persona as a behavior-predictive design tool rather than a demographic stereotype.
+[^public-christensen-jtbd]: [Competing Against Luck](https://www.harpercollins.com/products/competing-against-luck-clayton-m-christensen) (Christensen et al., 2016) — the canonical JTBD-in-product-strategy book; grounds the "persona captures the job" framing.
+
+[^public-long-ai-literacy]: [What is AI Literacy? Competencies and Design Considerations (CHI 2020)](https://dl.acm.org/doi/10.1145/3411764.3445100) (Long & Magerko, 2020) — the canonical paper on AI literacy as a measurable user attribute.
+[^public-amershi-hai]: [Guidelines for Human-AI Interaction (CHI 2019)](https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/) (Amershi et al., 2019) — formalizes the implication that a user encountering an AI alone needs visible confidence, limitations, and override paths.
+
+[^public-prasad-consent]: [Privacy Personas (CHI 2023)](https://dl.acm.org/doi/10.1145/3544548.3581102) (Prasad et al., 2023) — the user-centered persona model for data-sharing and consent, which the AI-PM synthesis adopts as the "consent posture" attribute.
 
 ## Extensions
 
@@ -160,4 +168,4 @@ and consent-posture matrices derived from real product usage.
 * [Decision Maker](/concepts/decision-maker.md)
 * [Product User](/concepts/product-user.md)
 * [Jobs To Be Done](/concepts/jobs-to-be-done.md)
-* [Persona (abstract class)](../references/persona.md)
+* [Persona (abstract class)](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md)

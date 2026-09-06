@@ -2,6 +2,7 @@
 type: Document
 title: Multi-Harness Plugin Migration Plan
 description: Migration plan for AI-Product-Manager to Ponytail-style multi-harness plugin architecture
+generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
 tags:
 - migration
 - plugin-architecture
@@ -20,11 +21,11 @@ Migrate AI-Product-Manager (and optionally okf-abstracts) from current Codex-onl
 
 ## Current State (AI-PM)
 
-```
+```text
 AI-Product-Manager/
 ├── .codex-plugin/
 │   └── plugin.json              # Codex manifest
-├── skills/                      # 13 skills (ai-pm-*)
+├── skills/                      # 19 skills (ai-pm-*)
 ├── templates/                   # 11 templates
 ├── references/                  # 7 references
 ├── agents/                      # ai-pm.md (single agent)
@@ -37,14 +38,14 @@ AI-Product-Manager/
 
 ## Target State (Ponytail-Style Multi-Harness)
 
-```
+```text
 AI-Product-Manager/
 ├── AGENTS.md                    # Single source of truth (always-on rules)
 ├── hooks/
 │   ├── ai-pm-instructions.js    # Shared instruction builder (ESM)
 │   ├── ai-pm-config.js          # Mode persistence (lite/full/ultra/off)
 │   └── ai-pm-frontmatter.cjs    # Skill/command frontmatter parser
-├── skills/                      # 13 skills (ai-pm-*) — shared
+├── skills/                      # 19 skills (ai-pm-*) — shared
 ├── commands/                    # Slash commands (.md files)
 ├── templates/                   # 11 templates — shared
 ├── references/                  # 7 references — shared
@@ -89,7 +90,7 @@ AI-Product-Manager/
 ## Harness Coverage Matrix
 
 | Harness | Installation Method | Config File | Auto-Activate | Slash Commands | Skills |
-|---------|---------------------|-------------|---------------|----------------|--------|
+| --------- | --------------------- | ------------- | --------------- | ---------------- | -------- |
 | **Codex** | `codex plugin add` | `.codex-plugin/plugin.json` | ✅ Hooks | ✅ | ✅ |
 | **Claude Code** | `/plugin install` | `.codex-plugin/hooks.json` | ✅ Hooks | ✅ | ✅ |
 | **OpenCode** | `opencode.json` plugin | `.opencode/plugins/ai-pm.mjs` | ✅ Transform | ✅ | ✅ |
@@ -123,7 +124,7 @@ export const AI_PM_RULES = `
 
 ## Core Principles
 - OKF v0.2 conformance mandatory
-- All concepts use YAML frontmatter with subtypes_of
+- All concepts use YAML frontmatter with subtype_of
 - Cross-repo references use full GitHub URLs + version pins
 - Trailing newlines: exactly 1 per file
 - markdownlint: MD013 (ignore frontmatter/code/refs), MD025 (single H1)
@@ -156,6 +157,7 @@ export function getAIPMInstructions(mode = 'full') {
 ## Migration Phases
 
 ### Phase 1: Foundation (Week 1)
+
 - [ ] Create `AGENTS.md` as single source of truth
 - [ ] Extract shared instruction builder to `hooks/ai-pm-instructions.js`
 - [ ] Create `hooks/ai-pm-config.js` for mode persistence
@@ -163,6 +165,7 @@ export function getAIPMInstructions(mode = 'full') {
 - [ ] Verify current Codex plugin still works
 
 ### Phase 2: Core Harness Adapters (Week 2)
+
 - [ ] `.codex-plugin/plugin.json` + `hooks/claude-codex-hooks.json`
 - [ ] `.opencode/plugins/ai-pm.mjs`
 - [ ] `.cursor/rules/ai-pm.mdc`
@@ -173,6 +176,7 @@ export function getAIPMInstructions(mode = 'full') {
 - [ ] `.qoder/rules/ai-pm.md`
 
 ### Phase 3: Advanced Harness Adapters (Week 3)
+
 - [ ] `.openclaw/skills/ai-pm/` (generate from `skills/`)
 - [ ] `.devin-plugin/plugin.json`
 - [ ] `.grok-plugin/plugin.json`
@@ -181,11 +185,13 @@ export function getAIPMInstructions(mode = 'full') {
 - [ ] `qoder-hooks.json` (for full Qoder plugin tier)
 
 ### Phase 4: MCP Server (Week 4)
+
 - [ ] `ai-pm-mcp/` package (optional, for MCP-only hosts)
 - [ ] Expose `ai_pm_instructions` tool + `ai_pm` prompt
 - [ ] Reuse `hooks/ai-pm-instructions.js` + `hooks/ai-pm-config.js`
 
 ### Phase 5: Packaging & Publishing (Week 5)
+
 - [ ] `package.json` with `files` array
 - [ ] `plugin.json` + `plugin.yaml` root manifests
 - [ ] Publish to npm: `@yoseph-zuskin/ai-product-manager`
@@ -199,12 +205,14 @@ export function getAIPMInstructions(mode = 'full') {
 okf-abstracts is a **dependency** of AI-PM, not a standalone plugin. Two options:
 
 ### Option A: okf-abstracts as Shared Library (Recommended)
+
 - okf-abstracts remains a pure OKF bundle (no plugin)
 - AI-PM plugin declares dependency: `"okf-abstracts": "v0.1.0"`
 - Harnesses load okf-abstracts concepts via GitHub URLs
 - Simpler, matches current architecture
 
 ### Option B: okf-abstracts as Companion Plugin
+
 - okf-abstracts gets its own plugin with concept-loading skills
 - Skills: `okf-load`, `okf-validate`, `okf-graph`
 - More complex, enables standalone okf-abstracts usage
@@ -216,14 +224,17 @@ okf-abstracts is a **dependency** of AI-PM, not a standalone plugin. Two options
 ## MCP Necessity Evaluation
 
 ### Ponytail's MCP Server Purpose
+
 - Serves ruleset to MCP-only hosts (no native plugin support)
 - Exposes `ponytail` prompt + `ponytail_instructions` tool
 - **Not a replacement** for always-on adapters
 
 ### AI-PM MCP Server: Needed?
+
 **No**, for these reasons:
+
 1. AI-PM is a **skill-based workflow plugin**, not a ruleset
-2. Primary value is the 13 skills + templates + agent, not a ruleset
+2. Primary value is the 19 skills + templates + agent, not a ruleset
 3. MCP hosts that matter (Cursor, Windsurf, Cline, Copilot, Kiro, Qoder, Devin, Grok, Gemini, Pi, OpenClaw, OpenCode, Codex, Claude Code) all have native plugin support
 4. MCP adds maintenance burden without clear user value
 
@@ -233,7 +244,7 @@ okf-abstracts is a **dependency** of AI-PM, not a standalone plugin. Two options
 
 ## Skill Migration Notes
 
-Current 13 skills already use OKF frontmatter with `subtypes_of: Skill`. For multi-harness:
+Current 19 skills already use OKF frontmatter with `subtype_of: Skill`. For multi-harness:
 
 1. **Keep OKF frontmatter** — it's the source of truth
 2. **Add skill manifest** for each harness that needs it:
@@ -249,7 +260,7 @@ Current 13 skills already use OKF frontmatter with `subtypes_of: Skill`. For mul
 ## Risk Mitigation
 
 | Risk | Mitigation |
-|------|------------|
+| ------ | ------------ |
 | Hook incompatibilities across harnesses | Test each harness in isolation; use shared instruction builder |
 | Skill discovery differences | Keep skills in `skills/`; each adapter registers the path |
 | Version drift between adapters | Single `package.json` version; CI validates all adapters |
@@ -273,7 +284,7 @@ Current 13 skills already use OKF frontmatter with `subtypes_of: Skill`. For mul
 ## Estimated Effort
 
 | Phase | Tasks | Estimate |
-|-------|-------|----------|
+| ------- | ------- | ---------- |
 | 1. Foundation | AGENTS.md, hooks, config | 2 days |
 | 2. Core Adapters | 8 harness rule files | 3 days |
 | 3. Advanced Adapters | 6 plugin manifests | 3 days |
@@ -286,7 +297,7 @@ Current 13 skills already use OKF frontmatter with `subtypes_of: Skill`. For mul
 ## Appendix: Ponytail File Mapping Reference
 
 | Ponytail File | AI-PM Equivalent | Purpose |
-|---------------|------------------|---------|
+| --------------- | ------------------ | --------- |
 | `AGENTS.md` | `AGENTS.md` | Always-on rules for all harnesses |
 | `hooks/ponytail-instructions.js` | `hooks/ai-pm-instructions.js` | Shared instruction builder |
 | `hooks/ponytail-config.js` | `hooks/ai-pm-config.js` | Mode persistence |

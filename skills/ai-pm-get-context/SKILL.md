@@ -4,13 +4,27 @@ displayName: AI PM Get Context
 type: Skill
 title: Get Context Skill
 description: Loads product context, saved references, and OKF concept references into the agent's working memory before any other skill executes.
-subtypes_of:
-- { type: Skill, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/skill.md>, version: v0.1.0 }
-generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
+user-invocable: true
+argument-hint: "[product or codebase path]"
+allowed-tools: Read Glob Grep Bash
+subtype_of:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+implements:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+generated:
+  by: human:yoseph-zuskin
+  at: '2026-08-19T12:00:00Z'
 verified:
-- { by: human:yoseph-zuskin, at: '2026-08-19T12:05:00Z' }
-- { by: opencode/deepseek-v4-flash-free, at: '2026-08-19T12:06:00Z' }
-- { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T16:40:30Z' }
+- by: human:yoseph-zuskin
+  at: '2026-08-19T12:05:00Z'
+- by: opencode/deepseek-v4-flash-free
+  at: '2026-08-19T12:06:00Z'
+- by: opencode/nemotron-3-ultra-free
+  at: '2026-08-23T16:40:30Z'
 tags:
 - context-loading
 - preflight
@@ -25,6 +39,7 @@ role_assignments:
 status: stable
 stale_after: 2027-08-19
 ---
+
 # Get Context Skill
 
 Loads product context, saved references, and OKF concept references into the agent's working memory before any other skill executes.
@@ -36,7 +51,7 @@ Loads product context, saved references, and OKF concept references into the age
 
 ## User Context
 
-Before starting, load [user-context](#) and run its preflight script when local shell access is available.
+Before starting, load saved user context and run its preflight script when local shell access is available.
 
 Attach provided product URLs, Figma files, screenshots, reference images, codebase paths, Storybook, tokens, design systems, brand assets, component refs, browser preferences, and share targets to the context.
 
@@ -68,7 +83,7 @@ Present context summary to user:
 Plugin: ai-product-manager
 References: ./references
 Templates: ./templates
-OKF Abstracts: <https://github.com/Yoseph-Zuskin/okf-abstracts> (v0.1.0)
+OKF Abstracts: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0> (v0.1.0)
 Available skills:
   discover  - Product discovery, JTBD, opportunity analysis
   design    - Product design, MVP, wireframes (+ @product-design.ideate)
@@ -94,3 +109,28 @@ After loading context, stop and await user's skill selection:
 `@ai-pm <skill> <task>`
 
 Do not proceed to other skills until context is confirmed loaded.
+
+## Handoff
+
+Produces: loaded context summary (product, references, templates, local design assets found).
+Routes to: the skill matching the user's task, via [`ai-pm-index`](../ai-pm-index/SKILL.md) routing.
+
+## Contract
+
+### Preconditions
+
+- A product, codebase path, or prior context reference is supplied.
+
+### Postconditions
+
+- Reply records the loaded context: product summary, references and templates available, local design assets found.
+
+### Invariants
+
+- Read-only: never modifies product files; missing assets are reported, never invented.
+
+## Verification
+
+- Confirm every reference and template path named in the reply resolves inside the bundle.
+- Confirm the reply lists loaded assets and explicitly reports missing ones.
+- Confirm no product file was modified during the run.

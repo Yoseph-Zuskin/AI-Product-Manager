@@ -4,7 +4,6 @@
 
 set -euo pipefail
 
-CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
 PLUGIN_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 REF_DIR="$PLUGIN_DIR/references"
 TEMPLATES_DIR="$PLUGIN_DIR/templates"

@@ -1,7 +1,7 @@
 # References
 
-Shared templates used by the AI Product Manager concepts. Placeholder — templates are added as the corresponding synthesis concepts are finalized.
+Shared references and templates used by the AI Product Manager concepts.
 
 ## Template contract
 
-Templates follow [the Template class contract](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/template.md>).
+Templates follow [the Template class contract](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/template.md).

@@ -12,6 +12,8 @@ tags:
 generated: { by: human:yoseph-zuskin, at: '2026-08-23T19:00:00Z' }
 status: stable
 stale_after: 2027-08-19
+subtype_of:
+  - { type: Template, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/template.md, version: v0.1.0 }
 ---
 # V2MOM Framework Template
 
@@ -152,7 +154,7 @@ MEASURES:
 ## References
 
 - [V2MOM Framework](../references/v2mom-framework.md)
-- [AI-Driven Product Strategy](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>)
+- [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
 - [AI Canvas 2.0](../references/ai-canvas-2.0.md)
 - [AI Radar 2.0](../references/ai-radar-2.0.md)
 - [Product Vision](../concepts/product-vision.md)

@@ -1,14 +1,30 @@
 ---
-type: Concept
+name: ai-pm-design
+displayName: AI PM Design
+type: Skill
 title: Product Design Skill
 description: Executes product design workflows — user stories, wireframes, prototyping, MVP/MVX definition, and agile delivery setup.
-subtypes_of:
-- { type: Skill, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/skill.md>, version: v0.1.0 }
-generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
+user-invocable: true
+argument-hint: "<product concept>"
+allowed-tools: Read Write Edit Glob Grep
+subtype_of:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+implements:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+generated:
+  by: human:yoseph-zuskin
+  at: '2026-08-19T12:00:00Z'
 verified:
-- { by: human:yoseph-zuskin, at: '2026-08-19T12:05:00Z' }
-- { by: opencode/deepseek-v4-flash-free, at: '2026-08-19T12:06:00Z' }
-- { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T16:40:30Z' }
+- by: human:yoseph-zuskin
+  at: '2026-08-19T12:05:00Z'
+- by: opencode/deepseek-v4-flash-free
+  at: '2026-08-19T12:06:00Z'
+- by: opencode/nemotron-3-ultra-free
+  at: '2026-08-23T16:40:30Z'
 tags:
 - product-design
 - mvp
@@ -22,9 +38,29 @@ role_assignments:
 - platform-admins-devops
 - governance-reps-legal-infosec
 - solution-architects
+sources:
+- id: r-ai-product-management
+  title: AI Product Management
+  resource: ../../concepts/ai-product-management.md
+- id: r-product-design-and-mvp
+  title: Product Design and MVP
+  resource: ../../concepts/product-design-and-mvp.md
+- id: r-software-system
+  title: Software System
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-system.md
+- id: r-software-development-lifecycle
+  title: Software Development Lifecycle
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-development-lifecycle.md
+- id: r-persona
+  title: Persona
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md
+- id: r-business-department
+  title: Business Department
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/business-department.md
 status: stable
 stale_after: 2027-08-19
 ---
+
 # Product Design Skill
 
 Executes product design workflows — user stories, wireframes, prototyping,
@@ -33,7 +69,7 @@ MVP/MVX definition, and agile delivery setup.
 ## Critical Overrides
 
 - Refer to the Plugin router [index](../ai-pm-index/SKILL.md) before proceeding.
-- Follow [critical-overrides](../../references/critical-overrides.md).
+- Follow [critical-overrides](../../../../references/critical-overrides.md).
 - Leverage `@product-design.ideate` for visual ideation and
 
   `@product-design.image-to-code` for prototype
@@ -41,8 +77,8 @@ MVP/MVX definition, and agile delivery setup.
 
 ## Prerequisites
 
-Requires context loaded via `ai-pm-get-context` skill. Typically follows
-`ai-pm-discover`.
+Requires context loaded via [`ai-pm-get-context`](../ai-pm-get-context/SKILL.md) skill. Typically follows
+[`ai-pm-discover`](../ai-pm-discover/SKILL.md).
 
 ## Workflow
 
@@ -89,12 +125,15 @@ AI Canvas 2.0 design phase → data/model management → rapid prototyping → l
 
 ## Sources
 
-[^r-ai-product-management]: [AI Product Management](<../concepts/ai-product-management.md>)
-[^r-product-design-and-mvp]: [Product Design and MVP](<../concepts/product-design-and-mvp.md>)
-[^r-software-system]: [SoftwareSystem](<<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-system.md>)
-[^r-software-development-lifecycle]: [Software DevelopmentLifecycle](<<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-development-lifecycle.md>)
-[^r-persona]: [Persona](<<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>)
-[^r-business-department]: [BusinessDepartment](<<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>)
+[^r-ai-product-management]: [AI Product Management](../../../../concepts/ai-product-management.md)
+
+[^r-product-design-and-mvp]: [Product Design and MVP](../../../../concepts/product-design-and-mvp.md)
+[^r-software-system]: [Software System](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-system.md)
+
+[^r-software-development-lifecycle]: [Software Development Lifecycle](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-development-lifecycle.md)
+[^r-persona]: [Persona](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md)
+
+[^r-business-department]: [Business Department](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/business-department.md)
 
 ## Output
 
@@ -106,7 +145,36 @@ Present design artifacts:
 - Agile setup: sprint cadence, ceremonies, team structure
 - PR/FAQ for stakeholder alignment
 
+## AI UX for Non-Determinism
+
+AI outputs vary; design for uncertainty, not just the happy path:
+
+- **Trust patterns** — citations for grounded claims, confidence display where calibrated, undo/edit on generations, human-in-the-loop escalation on low confidence.
+- **Streaming and disclosure** — stream long outputs with progressive disclosure; skeleton states while generating.
+- **Failure states** — empty states that teach prompting, error states for hallucinations that offer retry with narrowed scope, never dead ends.
+- **Personalization controls** — memory and tone controls the user can inspect and clear.
+
 ## Handoff
 
-Route to `ai-pm-architect` for architecture/ML decisions, or `ai-pm-architect`
-fordeployment planning.
+Route to [`ai-pm-architect`](../ai-pm-architect/SKILL.md) for architecture/ML decisions, or [`ai-pm-govern`](../ai-pm-govern/SKILL.md)
+for deployment planning.
+
+## Contract
+
+### Preconditions
+
+- A validated concept or explicit brief is available.
+
+### Postconditions
+
+- MVP scope plus user stories, each with acceptance criteria; out-of-scope items listed.
+
+### Invariants
+
+- Every story is testable; non-essentials are excluded explicitly, not silently.
+
+## Verification
+
+- Confirm every user story has acceptance criteria and the MVP lists out-of-scope items.
+- Confirm no story depends on an unvalidated assumption without flagging it.
+- Confirm the Handoff names the next skill (usually [`ai-pm-architect`](../ai-pm-architect/SKILL.md)).

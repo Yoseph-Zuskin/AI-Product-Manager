@@ -11,6 +11,8 @@ tags:
 generated: { by: human:yoseph-zuskin, at: '2026-08-23T19:00:00Z' }
 status: stable
 stale_after: 2027-08-19
+subtype_of:
+  - { type: Template, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/template.md, version: v0.1.0 }
 ---
 # Persona Template
 
@@ -153,6 +155,6 @@ Use this template to create detailed personas for AI product development, incorp
 
 ## References
 
-- [Persona](../references/persona.md) — Core concept
+- [Persona](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md) — Core concept
 - [Jobs-To-Be-Done & RWW](../references/jtbd-rww-frameworks.md) — JTBD + RWW frameworks
-- [AI-Driven Product Strategy](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>) — Source program
+- [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program) — Source program

@@ -4,13 +4,27 @@ displayName: AI PM Architect
 type: Skill
 title: AI Architect Skill
 description: Makes and documents architectural decisions for AI products — ML paradigm selection, system topology, infrastructure choices, deployment patterns, and ML-specific architectural concerns.
-subtypes_of:
-- { type: Skill, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/skill.md>, version: v0.1.0 }
-generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
+user-invocable: true
+argument-hint: "<AI use case>"
+allowed-tools: Read Write Edit Glob Grep
+subtype_of:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+implements:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+generated:
+  by: human:yoseph-zuskin
+  at: '2026-08-19T12:00:00Z'
 verified:
-- { by: human:yoseph-zuskin, at: '2026-08-19T12:05:00Z' }
-- { by: opencode/deepseek-v4-flash-free, at: '2026-08-19T12:06:00Z' }
-- { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T16:40:30Z' }
+- by: human:yoseph-zuskin
+  at: '2026-08-19T12:05:00Z'
+- by: opencode/deepseek-v4-flash-free
+  at: '2026-08-19T12:06:00Z'
+- by: opencode/nemotron-3-ultra-free
+  at: '2026-08-23T16:40:30Z'
 tags:
 - ai-architecture
 - architecture-decisions
@@ -24,9 +38,32 @@ role_assignments:
 - platform-admins-devops
 - governance-reps-legal-infosec
 - solution-architects
+sources:
+- id: r-architecture-pattern
+  title: Architecture Pattern
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/architecture-pattern.md
+- id: r-machine-learning-algorithm
+  title: Machine Learning Algorithm
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/machine-learning-algorithm.md
+- id: r-software-system
+  title: Software System
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-system.md
+- id: r-cloud-infrastructure
+  title: Cloud Infrastructure
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/cloud-infrastructure.md
+- id: r-on-premise-infrastructure
+  title: On-Premise Infrastructure
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/on-premise-infrastructure.md
+- id: r-software-development-lifecycle
+  title: Software Development Lifecycle
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-development-lifecycle.md
+- id: r-security-control
+  title: Security Control
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/security-control.md
 status: stable
 stale_after: 2027-08-19
 ---
+
 # AI Architect Skill
 
 Makes and documents architectural decisions for AI products — ML paradigm selection, system topology, infrastructure choices, deployment patterns, and ML-specific architectural concerns.
@@ -38,7 +75,7 @@ Makes and documents architectural decisions for AI products — ML paradigm sele
 
 ## Prerequisites
 
-Requires context loaded via `ai-pm-get-context` skill. Typically follows `ai-pm-discover` and/or `ai-pm-design`.
+Requires context loaded via [`ai-pm-get-context`](../ai-pm-get-context/SKILL.md) skill. Typically follows [`ai-pm-discover`](../ai-pm-discover/SKILL.md) and/or [`ai-pm-design`](../ai-pm-design/SKILL.md).
 
 ## Workflow
 
@@ -146,13 +183,16 @@ Run `scripts/validate-adr.sh docs/adr/` after creating/editing ADRs.
 
 ## Sources
 
-[^r-architecture-pattern]: [Architecture Pattern](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/architecture-pattern.md>)
-[^r-machine-learning-algorithm]: [Machine Learning Algorithm](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/machine-learning-algorithm.md>)
-[^r-software-system]: [Software System](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-system.md>)
-[^r-cloud-infrastructure]: [Cloud Infrastructure](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/cloud-infrastructure.md>)
-[^r-on-premise-infrastructure]: [On-Premise Infrastructure](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/on-premise-infrastructure.md>)
-[^r-software-development-lifecycle]: [Software Development Lifecycle](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-development-lifecycle.md>)
-[^r-security-control]: [Security Control](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/security-control.md>)
+[^r-architecture-pattern]: [Architecture Pattern](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/architecture-pattern.md)
+
+[^r-machine-learning-algorithm]: [Machine Learning Algorithm](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/machine-learning-algorithm.md)
+[^r-software-system]: [Software System](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-system.md)
+
+[^r-cloud-infrastructure]: [Cloud Infrastructure](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/cloud-infrastructure.md)
+[^r-on-premise-infrastructure]: [On-Premise Infrastructure](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/on-premise-infrastructure.md)
+
+[^r-software-development-lifecycle]: [Software Development Lifecycle](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-development-lifecycle.md)
+[^r-security-control]: [Security Control](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/security-control.md)
 
 ## Output
 
@@ -160,4 +200,22 @@ Present ADR with decision, consequences, ML-specific considerations, and PM's de
 
 ## Handoff
 
-Route to `ai-pm-govern` for ML model governance setup, or `deploy` for deployment execution (if separate skill).
+Route to [`ai-pm-govern`](../ai-pm-govern/SKILL.md) for ML model governance setup; deployment execution follows the deployment patterns above. Route to [`ai-pm-models`](../ai-pm-models/SKILL.md) for LLM selection, RAG/agent hardening, and prompt lifecycle.
+
+## Contract
+
+### Preconditions
+- AI use case plus constraints (latency, cost, data availability) are stated.
+
+### Postconditions
+- Recommended ML paradigm and infrastructure with trade-offs against at least one alternative.
+
+### Invariants
+- Paradigm choice is justified by data/problem type; scaling and monitoring are addressed.
+
+
+## Verification
+
+- Confirm the paradigm choice cites the data/problem type and at least one rejected alternative.
+- Confirm scaling, serving, monitoring, and rollback are each addressed.
+- Confirm the Handoff names the next skill (usually [`ai-pm-govern`](../ai-pm-govern/SKILL.md) or [`ai-pm-grow`](../ai-pm-grow/SKILL.md)).

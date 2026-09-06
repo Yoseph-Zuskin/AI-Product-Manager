@@ -1,14 +1,19 @@
 ---
-type: Template
+type: Reference
 title: AI Capability Maturity Model (CMM)
 description: Organizational capability maturity framework assessing AI development across five pillars (strategy & leadership, data & infrastructure, solution development & deployment, talent & expertise, governance & ethics), from Kellogg AI Strategies for Business Transformation program.
+verified: []
 tags:
 - ai-cmm
 - maturity
 - organization
 - capability
-resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
+resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
 author: Mohanbir Sawhney
+subtype_of:
+- { type: Reference, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/reference.md, version: v0.1.0 }
+status: draft
+stale_after: 2027-08-19
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
 ---
 # AI Capability Maturity Model (CMM)
@@ -40,5 +45,5 @@ Organizational capability maturity framework assessing AI development across fiv
 
 ## Sources
 
-- [AI Strategies for Business Transformation | Kellogg](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>) — official program page references AI CMM as a core framework
-- [AI Capability Maturity Model module in program curriculum](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>) — assessed across five pillars in module 4 (AI and operations management)
+- [AI Strategies for Business Transformation | Kellogg](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program) — official program page references AI CMM as a core framework
+- [AI Capability Maturity Model module in program curriculum](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program) — assessed across five pillars in module 4 (AI and operations management)

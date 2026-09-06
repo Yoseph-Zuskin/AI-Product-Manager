@@ -1,0 +1,45 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  knowledge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: AI-Product-Manager
+      # Pinned abstracts release; works once okf-abstracts is public.
+      - uses: actions/checkout@v4
+        with:
+          repository: Yoseph-Zuskin/okf-abstracts
+          ref: v0.1.0
+          path: okf-abstracts
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - run: pip install -r okf-abstracts/requirement.txt
+      - run: python okf-abstracts/scripts/validate_subtype.py AI-Product-Manager --abstracts-repo okf-abstracts --strict
+      - run: python okf-abstracts/scripts/check_consistency.py AI-Product-Manager
+      - run: python okf-abstracts/scripts/check_links.py AI-Product-Manager
+      - run: python okf-abstracts/scripts/check_newlines.py AI-Product-Manager
+      - run: python -c "import json,glob; [json.load(open(f,encoding='utf-8')) for f in glob.glob('AI-Product-Manager/**/*.json',recursive=True) if 'node_modules' not in f and 'qoder-hooks.json' not in f]; print('all JSON valid')"
+        # qoder-hooks.json is a JSONC example snippet (comments), excluded by design
+      - name: Harness copies are regen-fresh
+        shell: pwsh
+        run: |
+          & ./AI-Product-Manager/scripts/regen_openclaw.ps1
+          bash ./AI-Product-Manager/scripts/regen_ides.sh
+          git -C ./AI-Product-Manager diff --exit-code -- .openclaw .windsurf/rules/ai-pm.md .clinerules/ai-pm.md .kiro/steering/ai-pm.md .qoder/rules/ai-pm.md .cursor/rules/ai-pm.mdc
+
+  mcp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - run: cd ai-pm-mcp && npm install && npm test
+      # READMEs carry intentional marketing HTML (MD033), enforced by config elsewhere.
+      # NOTE: this job checks out the bundle at root (unlike knowledge/ above).
+      - run: npx --yes markdownlint-cli2 "**/*.md" "!**/README.md"

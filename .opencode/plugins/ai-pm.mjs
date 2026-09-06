@@ -3,13 +3,11 @@
 // Injects the AI-PM ruleset into every chat's system prompt,
 // registers slash commands, and adds the skills directory.
 
-import { createRequire } from 'module';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const require = createRequire(import.meta.url);
 
 // Load AGENTS.md as the ruleset
 const agentsPath = path.resolve(__dirname, '../../AGENTS.md');

@@ -4,13 +4,27 @@ displayName: AI PM Team
 type: Skill
 title: Cross-Functional AI Team Skill
 description: Defines team topology, collaboration rhythms, and decision rights for effective AI product development across business, engineering, data, design, and compliance functions.
-subtypes_of:
-- { type: Skill, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/skill.md>, version: v0.1.0 }
-generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
+user-invocable: true
+argument-hint: "<team or initiative>"
+allowed-tools: Read Write Edit Glob Grep
+subtype_of:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+implements:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+generated:
+  by: human:yoseph-zuskin
+  at: '2026-08-19T12:00:00Z'
 verified:
-- { by: human:yoseph-zuskin, at: '2026-08-19T12:05:00Z' }
-- { by: opencode/deepseek-v4-flash-free, at: '2026-08-19T12:06:00Z' }
-- { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T16:40:30Z' }
+- by: human:yoseph-zuskin
+  at: '2026-08-19T12:05:00Z'
+- by: opencode/deepseek-v4-flash-free
+  at: '2026-08-19T12:06:00Z'
+- by: opencode/nemotron-3-ultra-free
+  at: '2026-08-23T16:40:30Z'
 tags:
 - cross-functional-team
 - team-topology
@@ -26,16 +40,20 @@ role_assignments:
 status: stable
 stale_after: 2027-08-19
 sources:
+- id: r-stakeholder
+  title: Stakeholder
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/core/stakeholder.md
 - id: r-business-department
   title: Business Department
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/business-department.md
 - id: r-persona
   title: Persona
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md
 - id: r-software-development-lifecycle
   title: Software Development Lifecycle
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-development-lifecycle.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-development-lifecycle.md
 ---
+
 # Cross-Functional AI Team Skill
 
 Defines team topology, collaboration rhythms, and decision rights for effective AI product development across business, engineering, data, design, and compliance functions.
@@ -47,7 +65,7 @@ Defines team topology, collaboration rhythms, and decision rights for effective 
 
 ## Prerequisites
 
-Requires context loaded via `ai-pm-get-context` skill.
+Requires context loaded via [`ai-pm-get-context`](../ai-pm-get-context/SKILL.md) skill.
 
 ## Workflow
 
@@ -55,7 +73,7 @@ Requires context loaded via `ai-pm-get-context` skill.
 
 | Role | Department | Persona | Key Responsibilities |
 | --- | --- | --- | --- |
-| **AI Product Manager** | Product Department | Decision Maker | Product strategy, prioritization, stakeholder alignment, go/no-go decisions |
+| **AI Product Manager** | Product Department | Decision Maker | Product strategy, prioritization, stakeholder alignment, go/no-go decisions[^r-stakeholder] |
 | **ML Engineer / Data Scientist** | Engineering / Data Science | Product User | Model development, experimentation, feature engineering, evaluation |
 | **ML Platform Engineer** | Information Technology Department | Product User | ML infrastructure, feature store, model registry, CI/CD for ML |
 | **Data Engineer** | Information Technology Department | Product User | Data pipelines, feature store, data quality, lineage |
@@ -119,9 +137,10 @@ The AI Product Manager is the connective tissue:
 
 ## Sources
 
-[^r-business-department]: [Business Department](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>)
-[^r-persona]: [Persona](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>)
-[^r-software-development-lifecycle]: [Software Development Lifecycle](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-development-lifecycle.md>)
+[^r-business-department]: [Business Department](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/business-department.md)
+
+[^r-persona]: [Persona](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md)
+[^r-software-development-lifecycle]: [Software Development Lifecycle](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-development-lifecycle.md)
 
 ## Extensions
 
@@ -134,3 +153,34 @@ Placeholder for organization-specific team charter templates, competency matrice
 * [ML Model Governance](/concepts/ml-model-governance.md)
 * [AI Architecture Decisions](/concepts/ai-architecture-decisions.md)
 * [Responsible AI Product Practice](../../concepts/responsible-ai-product-practice.md)
+
+## Output
+
+- Team topology with RACI and collaboration rhythms.
+
+## Handoff
+
+Produces: team topology with RACI and collaboration rhythms.
+Routes to: [`ai-pm-design`](../ai-pm-design/SKILL.md) or [`ai-pm-govern`](../ai-pm-govern/SKILL.md) once ownership of the next deliverable is assigned.
+
+## Contract
+
+### Preconditions
+
+- Initiative and team constraints are described.
+
+### Postconditions
+
+- Team topology with RACI and collaboration rhythms.
+
+### Invariants
+
+- Every RACI row has exactly one Accountable; roles map to AGENTS.md role assignments.
+
+## Verification
+
+- Confirm every RACI row has exactly one Accountable and no empty cells.
+- Confirm roles map to the AGENTS.md role assignments.
+- Confirm rhythms name cadence, participants, and decision rights.
+
+[^r-stakeholder]: [Stakeholder](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/core/stakeholder.md)

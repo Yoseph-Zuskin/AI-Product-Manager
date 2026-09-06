@@ -11,6 +11,8 @@ tags:
 generated: { by: human:yoseph-zuskin, at: '2026-08-23T19:00:00Z' }
 status: stable
 stale_after: 2027-08-19
+subtype_of:
+  - { type: Template, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/template.md, version: v0.1.0 }
 ---
 # AI Capability Maturity Model (CMM) Template
 
@@ -104,6 +106,6 @@ Use this template to assess organizational AI maturity across five pillars using
 ## References
 
 - [AI Capability Maturity Model](../references/ai-capability-maturity-model.md)
-- [AI Strategies for Business Transformations](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>)
+- [AI Strategies for Business Transformations](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
 - [AI Canvas 2.0](../references/ai-canvas-2.0.md) for initiative framing
 - [AI Radar 2.0](../references/ai-radar-2.0.md) for opportunity mapping

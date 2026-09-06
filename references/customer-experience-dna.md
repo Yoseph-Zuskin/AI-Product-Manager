@@ -1,14 +1,19 @@
 ---
-type: Template
+type: Reference
 title: Customer Experience DNA (CxDNA) Framework
 description: Customer lifecycle framework mapping customer jobs across discover, learn, evaluate, buy, use, and advocate stages, paired with organizational matching jobs, from Kellogg AI Strategies for Business Transformation program.
+verified: []
 tags:
 - cxdna
 - customer-experience
 - framework
 - lifecycle
-resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
+resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
 author: Mohanbir Sawhney
+subtype_of:
+- { type: Reference, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/reference.md, version: v0.1.0 }
+status: draft
+stale_after: 2027-08-19
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
 ---
 # Customer Experience DNA (CxDNA) Framework
@@ -33,5 +38,5 @@ Customer lifecycle framework mapping customer jobs across six lifecycle stages, 
 
 ## Sources
 
-- [AI Strategies for Business Transformation | Kellogg](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>) — official program page references CxDNA as the customer experience framework
-- [CxDNA module in program curriculum](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>) — module 2 (AI and customer experience management)
+- [AI Strategies for Business Transformation | Kellogg](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program) — official program page references CxDNA as the customer experience framework
+- [CxDNA module in program curriculum](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program) — module 2 (AI and customer experience management)

@@ -14,6 +14,7 @@ The AI Product Manager plugin (code, skills, knowledge bundle, templates) is lic
 ## Permitted Use
 
 You may:
+
 - Install and use the plugin in your local Codex environment
 - Modify and extend skills, templates, and concepts for your own projects
 - Distribute modified versions under the same MIT License
@@ -22,6 +23,7 @@ You may:
 ## Restrictions
 
 You may not:
+
 - Sell the plugin or knowledge bundle as a standalone commercial product
 - Remove copyright, license, or attribution notices
 - Use the plugin for illegal activities or in violation of third-party rights
@@ -31,7 +33,7 @@ You may not:
 
 The plugin references and builds upon:
 
-1. **OKF Abstracts** (https://github.com/Yoseph-Zuskin/okf-abstracts) — MIT licensed
+1. **OKF Abstracts** (<https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0>) — MIT licensed
 2. **Professor Mohan Sawhney's Kellogg Executive Education materials** — Used under personal educational license from Emeritus. These materials are NOT redistributable. The plugin contains synthesized concepts, not verbatim transcripts.
 3. **Open Knowledge Format (OKF) v0.2** — Apache-2.0 licensed (Google Cloud)
 
@@ -61,4 +63,4 @@ These terms may be updated. Continued use after changes constitutes acceptance. 
 
 ## Contact
 
-For questions about these terms, open an issue at: https://github.com/Yoseph-Zuskin/ai-product-manager/issues
+For questions about these terms, open an issue at: <https://www.github.com/Yoseph-Zuskin/ai-product-manager/issues>

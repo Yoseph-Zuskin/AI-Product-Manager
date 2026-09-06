@@ -2,19 +2,23 @@
 type: Template
 title: Critical Overrides
 description: Critical overrides and routing rules for AI-PM plugin skills
+generated: { by: human:yoseph-zuskin, at: '2026-08-23T19:00:00Z' }
+verified: []
 tags:
 - overrides
 - routing
 - critical-rules
 - plugin-configuration
-status: stable
+subtype_of:
+- { type: Template, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/template.md, version: v0.1.0 }
+status: draft
 stale_after: 2027-08-19
 ---
 # Critical Overrides for AI-PM Plugin Skills
 
 ## General Overrides
 
-- **Single Agent**: All 13 skills managed by single agent `agents/ai-pm.md`
+- **Single Agent**: All 19 skills managed by single agent `agents/ai-pm.md`
 - **Cross-Plugin Skills**: Leverage `@product-design.*` for design capabilities
 - **ML-Specific Skills**: Defer to future `ai-ml-engineer` plugin for deep ML skills
 
@@ -63,7 +67,7 @@ stale_after: 2027-08-19
 ## OKF Compliance
 
 - All skill files use OKF v0.2 frontmatter
-- `subtypes_of` references okf-abstracts v0.1.0 via full GitHub URLs
+- `subtype_of` references okf-abstracts v0.1.0 via full GitHub URLs
 - `sources` array with proper IDs
-- `verified` array with 3 entries (human + 2 agents)
-- References in `references/` are OKF Template type concepts
+- `verified` array with human entry plus agent entries (append on each review)
+- References in `references/` are OKF Reference type concepts (framework descriptions); `critical-overrides.md` itself is Template type

@@ -4,13 +4,27 @@ displayName: AI PM Price
 type: Skill
 title: Pricing Strategy Skill
 description: Defines pricing strategy, monetization models, packaging, and value capture frameworks for AI products.
-subtypes_of:
-- { type: Skill, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/skill.md>, version: v0.1.0 }
-generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
+user-invocable: true
+argument-hint: "<product and packaging>"
+allowed-tools: Read Write Edit Glob Grep
+subtype_of:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+implements:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+generated:
+  by: human:yoseph-zuskin
+  at: '2026-08-19T12:00:00Z'
 verified:
-- { by: human:yoseph-zuskin, at: '2026-08-19T12:05:00Z' }
-- { by: opencode/deepseek-v4-flash-free, at: '2026-08-19T12:06:00Z' }
-- { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T16:40:30Z' }
+- by: human:yoseph-zuskin
+  at: '2026-08-19T12:05:00Z'
+- by: opencode/deepseek-v4-flash-free
+  at: '2026-08-19T12:06:00Z'
+- by: opencode/nemotron-3-ultra-free
+  at: '2026-08-23T16:40:30Z'
 tags:
 - pricing
 - monetization
@@ -28,14 +42,15 @@ stale_after: 2027-08-19
 sources:
 - id: r-business-department
   title: Business Department
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/business-department.md
 - id: r-machine-learning-algorithm
   title: Machine Learning Algorithm
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/machine-learning-algorithm.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/machine-learning-algorithm.md
 - id: r-software-system
   title: Software System
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-system.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-system.md
 ---
+
 # Pricing Strategy Skill
 
 Defines pricing strategy, monetization models, packaging, and value capture frameworks for AI products.
@@ -47,7 +62,7 @@ Defines pricing strategy, monetization models, packaging, and value capture fram
 
 ## Prerequisites
 
-Requires context loaded via `ai-pm-get-context` skill.
+Requires context loaded via [`ai-pm-get-context`](../ai-pm-get-context/SKILL.md) skill.
 
 ## Workflow
 
@@ -88,9 +103,10 @@ Requires context loaded via `ai-pm-get-context` skill.
 
 ## Sources
 
-[^r-business-department]: [Business Department](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>)
-[^r-machine-learning-algorithm]: [Machine Learning Algorithm](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/machine-learning-algorithm.md>)
-[^r-software-system]: [Software System](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-system.md>)
+[^r-business-department]: [Business Department](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/business-department.md)
+
+[^r-machine-learning-algorithm]: [Machine Learning Algorithm](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/machine-learning-algorithm.md)
+[^r-software-system]: [Software System](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-system.md)
 
 ## Output
 
@@ -103,4 +119,24 @@ Present pricing strategy:
 
 ## Handoff
 
-Route to `ai-pm-grow` for PLG/retention loops, `ai-pm-communicate` for pricing communication.
+Route to [`ai-pm-grow`](../ai-pm-grow/SKILL.md) for PLG/retention loops, [`ai-pm-communicate`](../ai-pm-communicate/SKILL.md) for pricing communication, [`ai-pm-business-case`](../ai-pm-business-case/SKILL.md) for full ROI/TCO/P&L cases including inference costs.
+
+## Contract
+
+### Preconditions
+
+- Product, packaging options, and cost basis are available.
+
+### Postconditions
+
+- Pricing recommendation with unit economics and stated assumptions.
+
+### Invariants
+
+- Every number traces to a listed assumption; competitor claims cite sources.
+
+## Verification
+
+- Confirm unit economics are shown and every number traces to a listed assumption.
+- Confirm competitor figures cite sources.
+- Confirm the Handoff names the next skill (usually [`ai-pm-grow`](../ai-pm-grow/SKILL.md)).

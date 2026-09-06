@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: Buyer Persona
 title: Buyer Persona
 description: A synthesis persona representing the economic buyer — the person who controls budget and signs the check. Distinct from the user (who consumes) and the decision-maker (who authorizes); on a single-step B2C purchase all three collapse, but on B2B sales they typically split.
 tags:
@@ -9,41 +9,40 @@ tags:
 - procurement
 - jtbd
 - synthesis
-subtypes_of:
-- { type: Persona, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>, version: v0.1.0 }
-- { type: Concept, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/foundational/concept.md>, version: v0.1.0 }
-- { type: Business Department, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>, version: v0.1.0 }
+subtype_of:
+- { type: Buyer Persona, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/buyer-persona.md, version: v0.1.0 }
 generated: { by: human:yoseph-zuskin, at: '2026-08-23T19:30:00Z' }
 verified:
 - { by: human:yoseph-zuskin, at: '2026-08-23T19:35:00Z' }
 - { by: opencode/deepseek-v4-flash-free, at: '2026-08-23T19:36:00Z' }
 - { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T19:37:00Z' }
+- { by: opencode/muse-spark-1.3-free, at: '2026-09-05T18:11:16Z' }
 status: stable
 stale_after: 2027-08-19
 sources:
 - id: p2-jtbd
   title: 'AI-Driven Product Strategy: JTBD for finding and prioritizing product opportunities'
-  resource: <https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>
+  resource: https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program
   author: human:mohan-sawhney
 - id: p2-go-to-market
   title: 'AI-Driven Product Strategy: Go-to-Market Strategy and the GTM Plan'
-  resource: <https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>
+  resource: https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program
   author: human:mohan-sawhney
 - id: r-persona
   title: Persona
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md
 - id: r-business-department
   title: Business Department
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/business-department.md
 - id: public-wamba-ai-value
   title: 'AI and Value: Business and Management Research Review'
   author: human:nathalie-wamba
-  resource: <https://www.sciencedirect.com/science/article/pii/S0007681323001181>
+  resource: https://www.sciencedirect.com/science/article/pii/S0007681323001181
   year: 2023
 - id: public-mitchell-ai-governance
   title: 'Governing AI: A Risk Management Framework Primer'
   author: human:matt-mitchell
-  resource: <https://aiGov.usc.edu>
+  resource: https://aiGov.usc.edu
   year: 2023
 ---
 # Buyer Persona
@@ -79,14 +78,21 @@ systems and overestimate the unit-price savings, which is exactly the
 mismatch the AI-aware buyer persona is designed to surface in the GTM
 plan[^public-wamba-ai-value].
 
+## Definition
+
+A detailed representation of the organizational buyer who authorizes purchase decisions. Captures budget authority, evaluation criteria, procurement process, compliance requirements, and decision-making dynamics. Extends Persona with organizational buying context.
+
 ## Sources
 
-[^p2-jtbd]: [AI-Driven Product Strategy](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>)
-[^p2-go-to-market]: [AI-Driven Product Strategy](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>)
-[^r-persona]: [Persona](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>)
-[^r-business-department]: [Business Department](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>)
-[^public-wamba-ai-value]: [AI and Value (Communications of the ACM, 2023)](<https://www.sciencedirect.com/science/article/pii/S0007681323001181>) (Wamba et al., 2023) — documents the systematic mismatch between enterprise buyers' AI cost expectations and actual TCO.
-[^public-mitchell-ai-governance]: [Governing AI: A Risk Management Framework Primer](<https://aiGov.usc.edu>) (Mitchell, 2023) — the canonical risk-management framing for AI buyers' explainability, residency, and lock-in concerns.
+[^p2-jtbd]: [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
+
+[^p2-go-to-market]: [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
+[^r-persona]: [Persona](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md)
+
+[^r-business-department]: [Business Department](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/business-department.md)
+[^public-wamba-ai-value]: [AI and Value (Communications of the ACM, 2023)](https://www.sciencedirect.com/science/article/pii/S0007681323001181) (Wamba et al., 2023) — documents the systematic mismatch between enterprise buyers' AI cost expectations and actual TCO.
+
+[^public-mitchell-ai-governance]: [Governing AI: A Risk Management Framework Primer](https://aiGov.usc.edu) (Mitchell, 2023) — the canonical risk-management framing for AI buyers' explainability, residency, and lock-in concerns.
 
 ## Extensions
 

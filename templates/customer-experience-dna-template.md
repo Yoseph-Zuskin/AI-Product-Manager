@@ -12,6 +12,8 @@ tags:
 generated: { by: human:yoseph-zuskin, at: '2026-08-23T19:00:00Z' }
 status: stable
 stale_after: 2027-08-19
+subtype_of:
+  - { type: Template, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/template.md, version: v0.1.0 }
 ---
 # Customer Experience DNA (CxDNA) Framework Template
 
@@ -115,6 +117,6 @@ For each lifecycle stage:
 ## References
 
 - [Customer Experience DNA Framework](../references/customer-experience-dna.md)
-- [AI Strategies for Business Transformations](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>)
+- [AI Strategies for Business Transformations](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
 - [Jobs To Be Done](../concepts/jobs-to-be-done.md)
 - [AI Canvas 2.0](../references/ai-canvas-2.0.md) for initiative framing

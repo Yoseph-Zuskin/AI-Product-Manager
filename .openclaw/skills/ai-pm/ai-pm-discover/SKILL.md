@@ -1,14 +1,30 @@
 ---
-type: Concept
+name: ai-pm-discover
+displayName: AI PM Discover
+type: Skill
 title: Product Discovery Skill
 description: Executes product discovery workflows — JTBD framing, opportunity analysis, hypothesis testing, and opportunity sizing.
-subtypes_of:
-- { type: Skill, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/skill.md>, version: v0.1.0 }
-generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
+user-invocable: true
+argument-hint: "<product or market>"
+allowed-tools: Read Glob Grep
+subtype_of:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+implements:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+generated:
+  by: human:yoseph-zuskin
+  at: '2026-08-19T12:00:00Z'
 verified:
-- { by: human:yoseph-zuskin, at: '2026-08-19T12:05:00Z' }
-- { by: opencode/deepseek-v4-flash-free, at: '2026-08-19T12:06:00Z' }
-- { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T16:40:30Z' }
+- by: human:yoseph-zuskin
+  at: '2026-08-19T12:05:00Z'
+- by: opencode/deepseek-v4-flash-free
+  at: '2026-08-19T12:06:00Z'
+- by: opencode/nemotron-3-ultra-free
+  at: '2026-08-23T16:40:30Z'
 tags:
 - product-discovery
 - jtbd
@@ -21,9 +37,17 @@ role_assignments:
 - platform-admins-devops
 - governance-reps-legal-infosec
 - solution-architects
+sources:
+- id: r-jobs-to-be-done
+  title: Jobs To Be Done
+  resource: ../../concepts/jobs-to-be-done.md
+- id: r-product-discovery
+  title: Product Discovery
+  resource: ../../concepts/product-discovery.md
 status: stable
 stale_after: 2027-08-19
 ---
+
 # Product Discovery Skill
 
 Executes product discovery workflows — JTBD framing, opportunity analysis,
@@ -32,11 +56,11 @@ hypothesis testing, and opportunity sizing.
 ## Critical Overrides
 
 - Refer to the Plugin router [index](../ai-pm-index/SKILL.md) before proceeding.
-- Follow [critical-overrides](../../references/critical-overrides.md).
+- Follow [critical-overrides](../../../../references/critical-overrides.md).
 
 ## Prerequisites
 
-Requires context loaded via `ai-pm-get-context` skill.
+Requires context loaded via [`ai-pm-get-context`](../ai-pm-get-context/SKILL.md) skill.
 
 ## Workflow
 
@@ -45,7 +69,7 @@ Requires context loaded via `ai-pm-get-context` skill.
 - Identify the job the customer hires a product to do
 - Capture persona, triggering situation, motivation, desired outcome
 - Distinguish functional, emotional, social jobs
-- Reference: [Jobs to Be Done](../../concepts/jobs-to-be-done.md)
+- Reference: [Jobs to Be Done](../../../../concepts/jobs-to-be-done.md)
 
   [^r-jobs-to-be-done]
 
@@ -54,7 +78,7 @@ Requires context loaded via `ai-pm-get-context` skill.
 - Customer complaints, call centers, sales feedback
 - Competitive gaps, adjacent industry analogies
 - Market/technology discontinuities (AI, regulatory)
-- Reference: [Product Discovery](../../concepts/product-discovery.md)
+- Reference: [Product Discovery](../../../../concepts/product-discovery.md)
 
   [^r-product-discovery]
 
@@ -76,8 +100,9 @@ Requires context loaded via `ai-pm-get-context` skill.
 
 ## Sources
 
-[^r-jobs-to-be-done]: [Jobs To Be Done](<../concepts/jobs-to-be-done.md>)
-[^r-product-discovery]: [Product Discovery](<../concepts/product-discovery.md>)
+[^r-jobs-to-be-done]: [Jobs To Be Done](../../../../concepts/jobs-to-be-done.md)
+
+[^r-product-discovery]: [Product Discovery](../../../../concepts/product-discovery.md)
 
 ## Output
 
@@ -91,4 +116,24 @@ Present discovery artifacts:
 
 ## Handoff
 
-Route to `ai-pm-design` for MVP/design, or `ai-pm-architect` for architecturedecisions.
+Route to [`ai-pm-design`](../ai-pm-design/SKILL.md) for MVP/design, or [`ai-pm-architect`](../ai-pm-architect/SKILL.md) for architecture decisions.
+
+## Contract
+
+### Preconditions
+
+- Problem space and target users are named; prior research loaded when available.
+
+### Postconditions
+
+- Ranked opportunities, each with a JTBD statement and supporting evidence.
+
+### Invariants
+
+- Every opportunity traces to cited evidence; ranking criterion is stated.
+
+## Verification
+
+- Confirm every opportunity has a JTBD statement and at least one cited evidence source.
+- Confirm the ranking criterion is stated and applied consistently.
+- Confirm the Handoff names the next skill (usually [`ai-pm-design`](../ai-pm-design/SKILL.md) or [`ai-pm-price`](../ai-pm-price/SKILL.md)).

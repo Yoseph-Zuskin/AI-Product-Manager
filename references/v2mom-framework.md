@@ -1,14 +1,19 @@
 ---
-type: Template
+type: Reference
 title: V2MOM Framework
 description: Strategic planning framework (Vision, Values, Methods, Obstacles, Measures) from Kellogg AI-Driven Product Strategy program, used for product vision and strategy alignment.
+verified: []
 tags:
 - v2mom
 - framework
 - strategic-planning
 - product-vision
-resource: <https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>
+resource: https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program
 author: Mohanbir Sawhney
+subtype_of:
+- { type: Reference, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/reference.md, version: v0.1.0 }
+status: draft
+stale_after: 2027-08-19
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
 ---
 # V2MOM Framework
@@ -32,5 +37,5 @@ Strategic planning framework used in the Kellogg AI-Driven Product Strategy prog
 
 ## Sources
 
-- [AI-Driven Product Strategy | Kellogg](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>) — official program page referencing V2MOM framework
-- [V2MOM module in program curriculum](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>) — Module 1: Product Vision, Strategy and Leadership
+- [AI-Driven Product Strategy | Kellogg](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program) — official program page referencing V2MOM framework
+- [V2MOM module in program curriculum](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program) — Module 1: Product Vision, Strategy and Leadership

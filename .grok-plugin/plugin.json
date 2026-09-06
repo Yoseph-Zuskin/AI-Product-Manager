@@ -1,11 +1,11 @@
 {
     "name":  "ai-product-manager",
-    "version":  "0.1.0",
+    "version": "0.1.1",
     "description":  "AI Product Manager knowledge kit for Grok Build - synthesizes AI Strategies \u0026 AI-Driven Product Strategy into actionable PM skills",
-    "author":  "Yoseph-Zuskin",
+    "author":  "Yoseph Zuskin",
     "license":  "MIT",
     "entry":  "skills/ai-pm-index",
-    "skills":  [
+    "skills": [
                    "ai-pm-index",
                    "ai-pm-get-context",
                    "ai-pm-discover",
@@ -18,36 +18,41 @@
                    "ai-pm-grow",
                    "ai-pm-communicate",
                    "ai-pm-vision",
-                   "ai-pm-audit"
+                   "ai-pm-audit",
+                   "ai-pm-evals",
+                   "ai-pm-platform",
+                   "ai-pm-models",
+                   "ai-pm-business-case",
+                   "ai-pm-vendor",
+                   "ai-pm-transform"
                ],
-    "references":  [
-                       "references/machine-learning-algorithm.md",
-                       "references/business-department.md",
-                       "references/persona.md",
-                       "references/software-system.md",
-                       "references/architecture-pattern.md",
-                       "references/security-control.md",
-                       "references/identity-provider.md",
-                       "references/software-development-lifecycle.md",
-                       "references/cloud-infrastructure.md",
-                       "references/on-premise-infrastructure.md"
-                   ],
+    "references": [
+                      "references/ai-canvas-2.0.md",
+                      "references/ai-capability-maturity-model.md",
+                      "references/ai-radar-2.0.md",
+                      "references/critical-overrides.md",
+                      "references/customer-experience-dna.md",
+                      "references/jtbd-rww-frameworks.md",
+                      "references/v2mom-framework.md"
+                  ],
     "agents":  [
-                   "agents/ai-pm.md"
-               ],
-    "templates":  [
+                  "agents/ai-pm.md"
+              ],
+    "templates": [
                       "templates/adr-template.md",
+                      "templates/ai-canvas-2.0-template.md",
+                      "templates/ai-capability-maturity-model-template.md",
+                      "templates/ai-radar-2.0-template.md",
+                      "templates/customer-experience-dna-template.md",
                       "templates/model-card-template.md",
+                      "templates/persona-template.md",
+                      "templates/postmortem-template.md",
                       "templates/prd-template.md",
                       "templates/raci-template.md",
-                      "templates/postmortem-template.md"
+                      "templates/v2mom-framework-template.md"
                   ],
     "scripts":  [
                     "scripts/get-context.sh",
                     "scripts/validate-adr.sh"
-                ],
-    "okf":  {
-                "abstracts":  "https://github.com/Yoseph-Zuskin/okf-abstracts",
-                "version":  "v0.1.0"
-            }
+                ]
 }

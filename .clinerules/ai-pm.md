@@ -2,8 +2,11 @@
 type: Template
 title: AI Product Manager Cline Rules
 description: Cline rules for AI Product Manager knowledge kit
-subtypes_of:
-- { type: Template, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/template.md>, version: v0.1.0 }
+tags:
+- ide-rules
+- ai-product-manager
+subtype_of:
+- { type: Template, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/template.md, version: v0.1.0 }
 generated: { by: human:yoseph-zuskin, at: '2026-08-23T19:00:00Z' }
 verified:
 - { by: human:yoseph-zuskin, at: '2026-08-23T19:05:00Z' }

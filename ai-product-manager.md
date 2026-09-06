@@ -1,61 +1,65 @@
 ---
 type: Agent
 title: AI Product Manager
-description: An agent-ready knowledge kit that synthesizes AI Strategies for Business Transformations and AI-Driven Product Strategy into an AI Product Manager practice, plus personal concepts.
+description: A knowledge-backed agent synthesizing two Kellogg Executive Education certificate programs into an AI product management practice.
+subtype_of:
+- { type: Agent, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/foundational/agent.md, version: v0.1.0 }
+generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:10:00Z' }
+verified:
+- { by: human:yoseph-zuskin, at: '2026-08-19T12:15:00Z' }
+- { by: opencode/muse-spark-1.3-free, at: '2026-09-05T18:11:16Z' }
 tags:
 - ai-product-management
 - product-management
 - synthesis
-subtypes_of:
-- { type: Agent, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/foundational/agent.md>, version: v0.1.0 }
-generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:10:00Z' }
-verified:
-- { by: human:yoseph-zuskin, at: '2026-08-19T12:15:00Z' }
-- { by: opencode/deepseek-v4-flash-free, at: '2026-08-19T12:16:00Z' }
+- ai
+- ml
+- agents
 status: stable
 stale_after: 2027-08-19
 sources:
 - id: ai-strategies-for-business-transformations-program
   title: AI Strategies for Business Transformations
-  resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
+  resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
   author: human:mohan-sawhney
 - id: ai-driven-product-strategy-program
   title: AI-Driven Product Strategy
-  resource: <https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>
+  resource: https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program
   author: human:mohan-sawhney
-- id: r-ai-canvas-2.0
-  title: AI Canvas 2.0 Framework
-  resource: <https://kdacapabilities.com/ai-workflows/ai-canvas/>
-- id: r-ai-radar-2.0
-  title: AI Radar 2.0
-  resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
-- id: r-ai-cmm
-  title: AI Capability Maturity Model
-  resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
-- id: r-cx-dna
-  title: Customer Experience DNA Framework
-  resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
-- id: r-v2mom
-  title: V2MOM Framework
-  resource: <https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>
-- id: r-jtbd-rww
-  title: Jobs-To-Be-Done & Real-Win-Worth Frameworks
-  resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
+skills:
+- ai-pm-index
+- ai-pm-get-context
+- ai-pm-discover
+- ai-pm-design
+- ai-pm-architect
+- ai-pm-govern
+- ai-pm-team
+- ai-pm-research
+- ai-pm-price
+- ai-pm-grow
+- ai-pm-communicate
+- ai-pm-vision
+- ai-pm-audit
+- ai-pm-evals
+- ai-pm-platform
+- ai-pm-models
+- ai-pm-business-case
+- ai-pm-vendor
+- ai-pm-transform
 ---
-This concept is the top node of the AI-Product-Manager bundle. It is an
-**agent**: asoftware-agent persona equipped with curated product-management knowledge drawnfrom twoKellogg Executive Education certificate programs (Sawhney's curricula) combinedwith personalconcepts added as this bundle grows.
 
-## What it is
+# AI Product Manager
 
-A working set of synthesized concepts (in `concepts/`), shared templates (in
-`references/`),
-and, when added, the user's own concepts. Each positional chain absorbs the two programs'
-teachings and leaves an `## Extensions` hook for new material.
+An agent-ready knowledge kit that synthesizes AI Strategies for Business Transformations and AI-Driven Product Strategy into an AI Product Manager practice, plus personal concepts[^ai-strategies-for-business-transformations-program][^ai-driven-product-strategy-program].
+
+## Definition
+
+The AI Product Manager agent embodies an experienced AI product manager who bridges business strategy and ML engineering, balances research velocity with delivery predictability, advocates for responsible AI and platform investment, translates business value into ML problems and metrics, and leads cross-functional teams through influence rather than authority.
+
+The kit ships 21 synthesis concepts, 19 workflow skills (see `skills/`), 11 templates (see `templates/`), and 7 references (see `references/`). Requests route through `ai-pm-index`; `ai-pm-get-context` runs first as preflight. Marketing and install instructions live in [README.md](README.md); the executable agent definition lives in [agents/ai-pm.md](agents/ai-pm.md).
 
 ## Sources
 
-The two programs it synthesizes:
-[^ai-strategies-for-business-transformations-program][^ai-driven-product-strategy-program]
+[^ai-strategies-for-business-transformations-program]: [AI Strategies for Business Transformations](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
 
-[^ai-strategies-for-business-transformations-program]: [AI Strategies for Business Transformations](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>)
-[^ai-driven-product-strategy-program]: [AI-Driven Product Strategy](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>)
+[^ai-driven-product-strategy-program]: [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)

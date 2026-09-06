@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: Knowledge Artifact
 title: Cross-Functional AI Team
 description: A team structure and collaboration model for AI product development that spans business, engineering, data, design, and compliance functions — aligning incentives, communication rhythms, and decision rights.
 tags:
@@ -9,28 +9,32 @@ tags:
 - collaboration
 - organizational-design
 - synthesis
-subtypes_of:
-- { type: Concept, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/foundational/concept.md>, version: v0.1.0 }
-- { type: Business Department, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>, version: v0.1.0 }
-- { type: Persona, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>, version: v0.1.0 }
-- { type: Software Development Lifecycle, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-development-lifecycle.md>, version: v0.1.0 }
+subtype_of:
+- { type: Knowledge Artifact, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/core/knowledge-artifact.md, version: v0.1.0 }
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:20:00Z' }
 verified:
 - { by: human:yoseph-zuskin, at: '2026-08-19T12:25:00Z' }
 - { by: opencode/deepseek-v4-flash-free, at: '2026-08-19T12:26:00Z' }
 - { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T16:40:30Z' }
+- { by: opencode/muse-spark-1.3-free, at: '2026-09-05T18:11:16Z' }
 status: stable
 stale_after: 2027-08-19
 sources:
+- id: r-role
+  title: Role
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/core/role.md
+- id: ai-pm-synthesis
+  title: Original AI-PM synthesis bridging both certificate programs
+  resource: https://www.github.com/Yoseph-Zuskin/AI-Product-Manager
 - id: r-business-department
   title: Business Department
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/business-department.md
 - id: r-persona
   title: Persona
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md
 - id: r-software-development-lifecycle
   title: Software Development Lifecycle
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-development-lifecycle.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-development-lifecycle.md
 ---
 # Cross-Functional AI Team
 
@@ -40,7 +44,13 @@ vocabularies, and cadences. This concept defines the team topology,
 collaboration rhythms, and decision rights for effective AI product
 development.
 
+## Definition
+
+A framework for structuring and operating cross-functional AI product teams. Defines team topology (platform vs. feature teams), collaboration rhythms (cadences, ceremonies, handoffs), decision rights (RACI), and role definitions across business, engineering, data, design, and compliance functions.[^r-role]
+
 ## Core Team Roles
+
+The Persona column names the analytical lens for working with each role, not the role-holder's identity — a fictional representation used for empathy, distinct from the functional role itself.
 
 | Role | Department | Persona | Key Responsibilities |
 | --- | --- | --- | --- |
@@ -105,11 +115,16 @@ The AI Product Manager is the connective tissue:
 
 [^r-business-department][^r-persona][^r-software-development-lifecycle]
 
+## Provenance
+
+Original AI-PM synthesis bridging both certificate programs[^ai-pm-synthesis].
+
 ## Sources
 
-[^r-business-department]: [Business Department](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/business-department.md>)
-[^r-persona]: [Persona](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>)
-[^r-software-development-lifecycle]: [Software Development Lifecycle](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-development-lifecycle.md>)
+[^r-business-department]: [Business Department](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/business-department.md)
+
+[^r-persona]: [Persona](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md)
+[^r-software-development-lifecycle]: [Software Development Lifecycle](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-development-lifecycle.md)
 
 ## Extensions
 
@@ -122,3 +137,7 @@ Placeholder for organization-specific team charter templates, competency matrice
 * [ML Model Governance](../concepts/ml-model-governance.md)
 * [AI Architecture Decisions](../concepts/ai-architecture-decisions.md)
 * [Responsible AI Product Practice](../concepts/responsible-ai-product-practice.md)
+
+[^ai-pm-synthesis]: Original synthesis for this bundle, drawing on both programs; see [ai-product-manager.md](../ai-product-manager.md).
+
+[^r-role]: [Role](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/core/role.md)

@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: Product User
 title: Product User
 description: A synthesis persona representing the end user of a product who is also the customer — a single individual who simultaneously is the user, the buyer, and the decision-maker. Common in B2C self-serve products where the purchase is small, immediate, and personal.
 tags:
@@ -9,37 +9,36 @@ tags:
 - self-serve
 - plg
 - synthesis
-subtypes_of:
-- { type: Persona, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>, version: v0.1.0 }
-- { type: User Persona, resource: /concepts/user-persona.md, version: '0.1.0' }
-- { type: Concept, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/foundational/concept.md>, version: v0.1.0 }
+subtype_of:
+- { type: Product User, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/product-user.md, version: v0.1.0 }
 generated: { by: human:yoseph-zuskin, at: '2026-08-23T19:30:00Z' }
 verified:
 - { by: human:yoseph-zuskin, at: '2026-08-23T19:35:00Z' }
 - { by: opencode/deepseek-v4-flash-free, at: '2026-08-23T19:36:00Z' }
 - { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T19:37:00Z' }
+- { by: opencode/muse-spark-1.3-free, at: '2026-09-05T18:11:16Z' }
 status: stable
 stale_after: 2027-08-19
 sources:
 - id: p1-customer-experience
   title: 'AI Strategies: Customer Experience DNA across the customer life cycle'
-  resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
+  resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
   author: human:mohan-sawhney
 - id: p2-jtbd
   title: 'AI-Driven Product Strategy: JTBD for finding and prioritizing product opportunities'
-  resource: <https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>
+  resource: https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program
   author: human:mohan-sawhney
 - id: p2-plg-best-practices
   title: 'AI-Driven Product Strategy: PLG best practices — democratization, templates, PQLs, loops'
-  resource: <https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>
+  resource: https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program
   author: human:mohan-sawhney
 - id: p2-freemium
   title: 'AI-Driven Product Strategy: Freemium and free trials — when to use which'
-  resource: <https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>
+  resource: https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program
   author: human:mohan-sawhney
 - id: r-persona
   title: Persona
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md
 - id: r-product-led-growth
   title: Product-Led Growth
   resource: /concepts/product-led-growth.md
@@ -49,17 +48,17 @@ sources:
 - id: public-christensen-jtbd
   title: 'Competing Against Luck: The Story of Innovation and Customer Choice'
   author: human:clayton-christensen
-  resource: <https://www.harpercollins.com/products/competing-against-luck-clayton-m-christensen>
+  resource: https://www.harpercollins.com/products/competing-against-luck-clayton-m-christensen
   year: 2016
-- id: public-osterspey-plg
-  title: 'Product-Led Growth: How to Build a Product That Sells Itself'
+- id: public-bush-plg
+  title: 'Product-Led Growth: How to Build a Product That Sells Its elf'
   author: human:wes-bush
-  resource: <https://www.productledalliance.com/product-led-growth-book/>
+  resource: https://www.productledalliance.com/product-led-growth-book/
   year: 2019
 - id: public-amershi-hai
   title: 'Guidelines for Human-AI Interaction (CHI 2019)'
   author: human:saleema-amershi
-  resource: <https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/>
+  resource: https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/
   year: 2019
 ---
 # Product User
@@ -72,7 +71,11 @@ with no other stakeholder in the loop. This collapse is what the
 audiences, as the case where the "audience persona" reduces to a single
 end user because the purchase is small enough to skip budget approval,
 immediate enough to bypass a committee, and personal enough that no
-proxy negotiates on the user's behalf[^p2-jtbd].
+proxy negotiates on the user's behalf[^p2-jtbd]. Outside this collapse case, user, buyer, and decision-maker remain disjoint: a fictional buyer-persona is never the same instance as an approver-role occupant.
+
+## Definition
+
+A representation of the end user who directly interacts with the AI product. Captures user goals, workflows, technical proficiency, trust factors, and AI-specific concerns (explainability, control, privacy). Extends Persona with product interaction context.
 
 ## When the collapse happens (and when it doesn't)
 
@@ -97,7 +100,7 @@ decision-maker's involvement. The wider PLG literature outside the
 program calls this the **product-qualified-lead (PQL)** motion: a
 behavioral trigger inside the product itself (Slack's message count,
 HubSpot's feature depth) replaces the sales-team qualification step and
-is the only "audience" the product has to address[^p2-plg-best-practices][^public-osterspey-plg].
+is the only "audience" the product has to address[^p2-plg-best-practices][^public-bush-plg].
 
 ## The product user in the AI Strategies program
 
@@ -138,16 +141,21 @@ every CxDNA stage or the product user defects in days, not quarters.
 
 ## Sources
 
-[^p1-customer-experience]: [AI Strategies for Business Transformations](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>)
-[^p2-jtbd]: [AI-Driven Product Strategy](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>)
-[^p2-plg-best-practices]: [AI-Driven Product Strategy](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>)
-[^p2-freemium]: [AI-Driven Product Strategy](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>)
-[^r-persona]: [Persona](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/persona.md>)
+[^p1-customer-experience]: [AI Strategies for Business Transformations](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
+
+[^p2-jtbd]: [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
+[^p2-plg-best-practices]: [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
+
+[^p2-freemium]: [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
+[^r-persona]: [Persona](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/persona.md)
+
 [^r-product-led-growth]: [Product-Led Growth](/concepts/product-led-growth.md)
 [^r-jtbd-frameworks]: [Jobs-To-Be-Done & Real-Win-Worth Frameworks](../references/jtbd-rww-frameworks.md)
-[^public-christensen-jtbd]: [Competing Against Luck](<https://www.harpercollins.com/products/competing-against-luck-clayton-m-christensen>) (Christensen et al., 2016) — the canonical JTBD-in-product-strategy book; the "user hires a product to do a job" framing the AI-PM synthesis builds on.
-[^public-osterspey-plg]: [Product-Led Growth](<https://www.productledalliance.com/product-led-growth-book/>) (Bush, 2019) — the canonical PLG book; the PQL motion and the "product as salesperson" framing both come from this tradition.
-[^public-amershi-hai]: [Guidelines for Human-AI Interaction (CHI 2019)](<https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/>) (Amershi et al., 2019) — formalizes the implication that a user encountering an AI alone needs visible confidence, limitations, and override paths.
+
+[^public-christensen-jtbd]: [Competing Against Luck](https://www.harpercollins.com/products/competing-against-luck-clayton-m-christensen) (Christensen et al., 2016) — the canonical JTBD-in-product-strategy book; the "user hires a product to do a job" framing the AI-PM synthesis builds on.
+[^public-bush-plg]: [Product-Led Growth](https://www.productledalliance.com/product-led-growth-book/) (Bush, 2019) — the canonical PLG book; the PQL motion and the "product as salesperson" framing both come from this tradition.
+
+[^public-amershi-hai]: [Guidelines for Human-AI Interaction (CHI 2019)](https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/) (Amershi et al., 2019) — formalizes the implication that a user encountering an AI alone needs visible confidence, limitations, and override paths.
 
 ## Extensions
 

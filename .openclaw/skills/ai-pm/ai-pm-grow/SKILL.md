@@ -1,14 +1,30 @@
 ---
-type: Concept
+name: ai-pm-grow
+displayName: AI PM Grow
+type: Skill
 title: Grow Skill
 description: Drives product-led growth, retention, and expansion loops — from activation to advocacy, with AI as force multiplier.
-subtypes_of:
-- { type: Skill, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/skill.md>, version: v0.1.0 }
-generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
+user-invocable: true
+argument-hint: "<product and funnel stage>"
+allowed-tools: Read Write Edit Glob Grep
+subtype_of:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+implements:
+- type: Skill
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/skill.md
+  version: v0.1.0
+generated:
+  by: human:yoseph-zuskin
+  at: '2026-08-19T12:00:00Z'
 verified:
-- { by: human:yoseph-zuskin, at: '2026-08-19T12:05:00Z' }
-- { by: opencode/deepseek-v4-flash-free, at: '2026-08-19T12:06:00Z' }
-- { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T16:40:30Z' }
+- by: human:yoseph-zuskin
+  at: '2026-08-19T12:05:00Z'
+- by: opencode/deepseek-v4-flash-free
+  at: '2026-08-19T12:06:00Z'
+- by: opencode/nemotron-3-ultra-free
+  at: '2026-08-23T16:40:30Z'
 tags:
 - plg
 - growth
@@ -22,22 +38,26 @@ role_assignments:
 - platform-admins-devops
 - governance-reps-legal-infosec
 - solution-architects
+sources:
+- id: r-metric
+  title: Metric
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/core/metric.md
 status: stable
 stale_after: 2027-08-19
 ---
+
 # Grow Skill
 
-Drives product-led growth, retention, and expansion loops — from activation toadvocacy, with AI as force multiplier.
+Drives product-led growth, retention, and expansion loops — from activation to advocacy, with AI as force multiplier.
 
 ## Critical Overrides
 
 - Refer to the Plugin router [index](../ai-pm-index/SKILL.md) before proceeding.
-
-- Follow [critical-overrides](../../references/critical-overrides.md).
+- Follow [critical-overrides](../../../../references/critical-overrides.md).
 
 ## Prerequisites
 
-- Follow [critical-overrides](../../references/critical-overrides.md).
+- Follow [critical-overrides](../../../../references/critical-overrides.md).
 
 ## Workflow
 
@@ -84,7 +104,7 @@ Choose the right growth motion for your AI product:
 
 ### 4. PLG Metrics
 
-Track the right metrics for your PLG motion:
+Track the right metrics for your PLG motion:[^r-metric]
 
 - **Activation Rate**: % users reaching first value moment
 - **Time-to-Value**: Time from signup to first value realization
@@ -94,14 +114,42 @@ Track the right metrics for your PLG motion:
 
 ## Sources
 
-- [AI Strategies for Business Transformations](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-progra>m)
-- [AI-Driven Product Strategy](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-progra>m)
+- [AI Strategies for Business Transformations](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
+- [AI-Driven Product Strategy](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program)
 - [Product-Led Growth](<https://www.productledinstitute.com>/)
-- [Grow](../../concepts/product-led-growth.md)
-- [Product Evolution](../../concepts/product-evolution.md)
+- [Grow](../../../../concepts/product-led-growth.md)
+- [Product Evolution](../../../../concepts/product-evolution.md)
+
+## Output
+
+- Growth loop diagram in words (acquisition, activation, retention, referral, revenue).
+- Prioritized experiment backlog, each with metric and success threshold.
 
 ## Handoff
 
 - **PQL Definition & Handoff Process**: Criteria, routing, SLAs
 - **Expansion Playbooks**: Playbook per segment/use case
 - **Revenue Attribution**: Track PLG vs. sales-sourced pipeline
+- **Internal adoption**: see [`ai-pm-transform`](../ai-pm-transform/SKILL.md) for literacy campaigns and rollout beyond PLG
+
+## Contract
+
+### Preconditions
+
+- Product and funnel stage (with data where available) are known.
+
+### Postconditions
+
+- Growth loop plus prioritized experiments, each with metric and success threshold.
+
+### Invariants
+
+- Every experiment names its metric and threshold; the loop closes (retention feeds acquisition).
+
+## Verification
+
+- Confirm each experiment names its metric and success threshold.
+- Confirm the loop closes: retention output feeds back into acquisition.
+- Confirm the Handoff names the next skill (usually [`ai-pm-communicate`](../ai-pm-communicate/SKILL.md)).
+
+[^r-metric]: [Metric](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/core/metric.md)

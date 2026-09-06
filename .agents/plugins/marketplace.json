@@ -1,0 +1,20 @@
+{
+  "name": "ai-product-manager",
+  "interface": {
+    "displayName": "AI Product Manager"
+  },
+  "plugins": [
+    {
+      "name": "ai-product-manager",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

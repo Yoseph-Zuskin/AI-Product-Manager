@@ -1,14 +1,19 @@
 ---
-type: Template
+type: Reference
 title: Jobs-To-Be-Done & Real-Win-Worth Frameworks
 description: Customer-centric opportunity discovery frameworks used across both Kellogg certificate programs — JTBD defines the job a customer wants done; RWW assesses market opportunity (Real, Worth, Win).
+verified: []
 tags:
 - jtbd
 - rww
 - framework
 - opportunity-discovery
-resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
+resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
 author: Mohanbir Sawhney
+subtype_of:
+- { type: Reference, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/reference.md, version: v0.1.0 }
+status: draft
+stale_after: 2027-08-19
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
 ---
 # Jobs-To-Be-Done (JTBD) & Real-Win-Worth (RWW) Frameworks
@@ -50,5 +55,5 @@ Customer-centric opportunity discovery frameworks used across both Kellogg Execu
 
 ## Sources
 
-- [AI Strategies for Business Transformation | Kellogg](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>) — JTBD as enterprise-wide organizing framework
-- [AI-Driven Product Strategy | Kellogg](<https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program>) — JTBD and RWW in Module 2 (Opportunity Analysis and Product Discovery)
+- [AI Strategies for Business Transformation | Kellogg](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program) — JTBD as enterprise-wide organizing framework
+- [AI-Driven Product Strategy | Kellogg](https://online.em.kellogg.northwestern.edu/ai-driven-product-strategy-program) — JTBD and RWW in Module 2 (Opportunity Analysis and Product Discovery)

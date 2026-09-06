@@ -11,6 +11,8 @@ tags:
 generated: { by: human:yoseph-zuskin, at: '2026-08-23T19:00:00Z' }
 status: stable
 stale_after: 2027-08-19
+subtype_of:
+  - { type: Template, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/template.md, version: v0.1.0 }
 ---
 # AI Radar 2.0 Template
 
@@ -87,6 +89,6 @@ Map initiatives across the enterprise value chain:
 ## References
 
 - [AI Radar 2.0](../references/ai-radar-2.0.md)
-- [AI Strategies for Business Transformations](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>)
+- [AI Strategies for Business Transformations](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program)
 - [AI Capability Maturity Model](../references/ai-capability-maturity-model.md)
 - [Customer Experience DNA](../references/customer-experience-dna.md)

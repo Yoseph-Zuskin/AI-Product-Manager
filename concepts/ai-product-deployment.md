@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: Workflow
 title: AI Product Deployment
 description: A framework for deploying AI products across cloud, on-premise, and hybrid environments — covering model serving patterns, infrastructure decisions, monitoring, and operational readiness.
 tags:
@@ -10,40 +10,43 @@ tags:
 - on-premise-infrastructure
 - software-system
 - synthesis
-subtypes_of:
-- { type: Concept, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/foundational/concept.md>, version: v0.1.0 }
-- { type: Software System, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-system.md>, version: v0.1.0 }
-- { type: Cloud Infrastructure, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/cloud-infrastructure.md>, version: v0.1.0 }
-- { type: On-Premise Infrastructure, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/on-premise-infrastructure.md>, version: v0.1.0 }
-- { type: Software Development Lifecycle, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-development-lifecycle.md>, version: v0.1.0 }
-- { type: Security Control, resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/security-control.md>, version: v0.1.0 }
+subtype_of:
+- { type: Workflow, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/core/workflow.md, version: v0.1.0 }
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:20:00Z' }
 verified:
 - { by: human:yoseph-zuskin, at: '2026-08-19T12:25:00Z' }
 - { by: opencode/deepseek-v4-flash-free, at: '2026-08-19T12:26:00Z' }
 - { by: opencode/nemotron-3-ultra-free, at: '2026-08-23T16:40:30Z' }
+- { by: opencode/muse-spark-1.3-free, at: '2026-09-05T18:11:16Z' }
 status: stable
 stale_after: 2027-08-19
 sources:
+- id: ai-pm-synthesis
+  title: Original AI-PM synthesis bridging both certificate programs
+  resource: https://www.github.com/Yoseph-Zuskin/AI-Product-Manager
 - id: r-software-system
   title: Software System
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-system.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-system.md
 - id: r-cloud-infrastructure
   title: Cloud Infrastructure
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/cloud-infrastructure.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/cloud-infrastructure.md
 - id: r-on-premise-infrastructure
   title: On-Premise Infrastructure
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/on-premise-infrastructure.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/on-premise-infrastructure.md
 - id: r-software-development-lifecycle
   title: Software Development Lifecycle
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-development-lifecycle.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-development-lifecycle.md
 - id: r-security-control
   title: Security Control
-  resource: <https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/security-control.md>
+  resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/security-control.md
 ---
 # AI Product Deployment
 
 Deploying AI products requires orchestrating model artifacts, infrastructure, monitoring, and security across diverse environments. This concept provides a structured approach to deployment decisions spanning cloud, on-premise, and hybrid topologies.
+
+## Definition
+
+A framework for deploying AI products across cloud, on-premise, and hybrid environments. Covers model serving patterns (monolithic, microservices, ensembles, edge), infrastructure decisions (GPU/TPU access, data gravity, compliance, cost models), and ML-specific concerns (feature stores, model registries, training pipelines, experiment tracking, monitoring).
 
 ## Deployment Topologies
 
@@ -120,13 +123,19 @@ graph LR
 - [ ] Runbook updated with model-specific procedures
 - [ ] Stakeholder communication sent (release notes, known limitations)
 
+## Provenance
+
+Original AI-PM synthesis bridging both certificate programs[^ai-pm-synthesis].
+
 ## Sources
 
-[^r-software-system]: [Software System](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-system.md>)
-[^r-cloud-infrastructure]: [Cloud Infrastructure](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/cloud-infrastructure.md>)
-[^r-on-premise-infrastructure]: [On-Premise Infrastructure](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/application/on-premise-infrastructure.md>)
-[^r-software-development-lifecycle]: [Software Development Lifecycle](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/software-development-lifecycle.md>)
-[^r-security-control]: [Security Control](<https://www.github.com/Yoseph-Zuskin/okf-abstracts/entities/domain/security-control.md>)
+[^r-software-system]: [Software System](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-system.md)
+
+[^r-cloud-infrastructure]: [Cloud Infrastructure](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/cloud-infrastructure.md)
+[^r-on-premise-infrastructure]: [On-Premise Infrastructure](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/application/on-premise-infrastructure.md)
+
+[^r-software-development-lifecycle]: [Software Development Lifecycle](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/software-development-lifecycle.md)
+[^r-security-control]: [Security Control](https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/security-control.md)
 
 ## Extensions
 
@@ -139,3 +148,5 @@ Placeholder for organization-specific deployment runbooks, cost models, and vend
 * [AI Architecture Decisions](/concepts/ai-architecture-decisions.md)
 * [Cross-Functional AI Team](/concepts/cross-functional-ai-team.md)
 * [Responsible AI Product Practice](/concepts/responsible-ai-product-practice.md)
+
+[^ai-pm-synthesis]: Original synthesis for this bundle, drawing on both programs; see [ai-product-manager.md](../ai-product-manager.md).

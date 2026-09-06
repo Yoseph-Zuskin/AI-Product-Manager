@@ -1,14 +1,19 @@
 ---
-type: Template
+type: Reference
 title: AI Radar 2.0
 description: Enterprise-wide framework for mapping Gen AI opportunities and surfacing initiatives with greatest business impact, developed by Kellogg School of Management, referenced in the AI Strategies for Business Transformation program.
+verified: []
 tags:
 - ai-radar
 - framework
 - enterprise-ai
 - gen-ai
-resource: <https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>
+resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
 author: Mohanbir Sawhney
+subtype_of:
+- { type: Reference, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/reference.md, version: v0.1.0 }
+status: draft
+stale_after: 2027-08-19
 generated: { by: human:yoseph-zuskin, at: '2026-08-19T12:00:00Z' }
 ---
 # AI Radar 2.0
@@ -34,5 +39,5 @@ AI Radar 2.0 maps opportunities across enterprise dimensions, typically includin
 
 ## Sources
 
-- [AI Strategies for Business Transformation | Kellogg](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>) — official program page referencing AI Radar 2.0 as a key framework
-- [AI Radar 2.0 module in program curriculum](<https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program>) — framework applied across module 2 (customer experience) and module 7 (transformation strategy)
+- [AI Strategies for Business Transformation | Kellogg](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program) — official program page referencing AI Radar 2.0 as a key framework
+- [AI Radar 2.0 module in program curriculum](https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program) — framework applied across module 2 (customer experience) and module 7 (transformation strategy)

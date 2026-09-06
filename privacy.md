@@ -15,7 +15,7 @@ The AI Product Manager plugin is distributed as a local Codex plugin bundle. All
 
 Some skills may reference external resources when explicitly invoked by the user:
 
-- **OKF Abstracts:** Skills may reference concept definitions from the okf-abstracts repository (https://github.com/Yoseph-Zuskin/okf-abstracts) via GitHub URLs. No API keys or authentication required; these are public HTTPS links to markdown files.
+- **OKF Abstracts:** Skills may reference concept definitions from the okf-abstracts repository (<https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0>) via GitHub URLs. No API keys or authentication required; these are public HTTPS links to markdown files.
 - **External APIs:** Individual skills may suggest using third-party APIs (e.g., Figma, Jira, GitHub) when the user explicitly configures them. Data sent to those systems is governed by the user's own configuration and the third-party provider's privacy policy.
 - **Local files:** Skills may read local project files (README, code, config) when the user provides paths. These files never leave the local environment.
 
@@ -38,8 +38,8 @@ All content is derived from publicly available sources and Professor Mohan Sawhn
 
 ## Contact
 
-- **Repository:** https://github.com/Yoseph-Zuskin/ai-product-manager
-- **Issues:** https://github.com/Yoseph-Zuskin/ai-product-manager/issues
+- **Repository:** <https://www.github.com/Yoseph-Zuskin/ai-product-manager>
+- **Issues:** <https://www.github.com/Yoseph-Zuskin/ai-product-manager/issues>
 - **Maintainer:** Yoseph-Zuskin
 
 ## Updates

@@ -1,23 +1,39 @@
 # CHANGELOG
 
-## [0.1.1] - 2026-08-29
+## [0.1.1] - 2026-09-05
+
+### Added
+
+- 6 bridge skills from job-description gap analysis (status `draft`, big-tech + enterprise/consulting/banking/startup JDs): `ai-pm-evals`, `ai-pm-platform`, `ai-pm-models`, `ai-pm-business-case`, `ai-pm-vendor`, `ai-pm-transform`
+- `regulated-ai-deployment` concept (draft): pattern notes toward exam-grade practices for regulated industries (model-risk artifacts, adverse-action reasoning, decision reconstruction, champion-challenger)
+- Executable Contract/Verification in all skills; required harness fields (`user-invocable`, `argument-hint`, `allowed-tools`, `implements`); AI UX section in `ai-pm-design`
+- Harness copies generated from canonical sources (`scripts/regen_openclaw.ps1`, `scripts/regen_ides.ps1`); Copilot plugin manifest (`.github/plugin.json`); Codex-native marketplace (`.agents/plugins/marketplace.json`)
+- Privacy policy (`privacy.md`) and Terms of Service (`terms.md`) for marketplace compliance
+- Explicit `displayName` field in skill frontmatter entries
+- Version bump script (`scripts/bump_version.sh`) for centralized version management
+
 ### Fixed
-- Skill display names: changed from "Ai Pm *" to "AI PM *" via explicit `displayName` in SKILL.md frontmatter
+
+- YAML hard failures: agent `sources` run-on, 10 reference `*status` run-ons, missing frontmatter on program concept
+- Concept lattice: real is-a parents for all concepts (no vacuous root links); 10 abstract-shadow references deleted; templates single-parented; persona concepts use L3 abstract parents
+- Typo sweeps: link brackets, missing spaces, Cyrillic homoglyph, broken relative links, unclosed fences
+- Manifest inventories synced (references, templates, skills) across all harnesses; repaired invalid JSON tails
+- Skill display names: changed from `Ai Pm *` to `AI PM *` via explicit `displayName` in SKILL.md frontmatter
 - OKF type: changed skill files from `type: Concept` to `type: Skill` for proper classification
 - Added `logoDark` to plugin manifest for dark-mode compatibility (reuses transparent-background logo)
-- Plugin validation: removed invalid `hooks` field from manifest (rejected by validator)
-
-### Added
-- Privacy policy (`privacy.md`) and Terms of Service (`terms.md`) for marketplace compliance
-- Explicit `displayName` field in all 13 skill frontmatter entries
-- Version bump script (`scripts/bump_version_v3.py`) for centralized version management
+- Plugin validation: removed invalid `hooks` field from the Codex manifest (rejected by validator); the root manifest's `hooks`/`commands` entries are its own schema and stay
 
 ### Changed
-- Skill frontmatter `type: Concept` → `type: Skill` (subtypes_of already referenced Skill)
-- Skill `verified` timestamps updated to 2026-08-29T15:58:00Z
+
+- Skill frontmatter `type: Concept` → `type: Skill` (subtype_of already referenced Skill)
+- Canonical linkage key `subtypes_of` → `subtype_of` across all bundles (aliases accepted with warnings)
+- Glue slim-down: looped MCP resource listing, shared hooks loader, slimmer `bump_version.sh`, stub-free `package.json` (MCP test green)
+- Harness parity: byte-identical Bash regen ports (25/25 files) plus CI regen-freshness gate over OpenClaw and IDE rule files
 
 ## [0.1.0] - 2026-08-29
+
 ### Added
+
 - **Initial release**: AI Product Manager plugin for Codex/ChatGPT
 - **Knowledge Bundle (OKF v0.2)**: 20 concepts synthesized from Professor Mohan Sawhney's Kellogg Executive Education certificate programs:
   - AI Strategies for Business Transformations
