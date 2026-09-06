@@ -9,11 +9,11 @@ jobs:
       - uses: actions/checkout@v5
         with:
           path: AI-Product-Manager
-      # Pinned abstracts release; works once okf-abstracts is public.
+      # Pinned abstracts main; works once okf-abstracts is public.
       - uses: actions/checkout@v5
         with:
           repository: Yoseph-Zuskin/okf-abstracts
-          ref: v0.1.0
+          ref: main
           path: okf-abstracts
       - uses: actions/setup-python@v6
         with:
