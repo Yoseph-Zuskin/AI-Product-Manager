@@ -175,3 +175,20 @@ When routing, acknowledge:
 > "Routing to `<skill>` skill for [brief reason]. One moment..."
 
 Then invoke target skill via `@ai-pm <skill> <task>`.
+
+## Release Workflow
+
+- Work on `develop`; `main` is locked. Never commit or push; leave changes
+  local for review.
+- Log user-facing changes under `## [Unreleased]` in `CHANGELOG.md`;
+  never pre-create version sections or delete `Unreleased` (the release
+  workflow promotes it and fails without it). `log.md` keeps one section
+  per day.
+- `VERSION` is the single source of truth; `scripts/bump_version.sh` syncs
+  it across manifests (abstract pins stay untouched — dep versions move
+  only deliberately). PRs check the `CHANGELOG Unreleased` box in the PR
+  template and keep CI green.
+- Release: dispatch the `release` workflow with `x.y.z` → `release/vX.Y.Z`
+  PR → review → merge → tag `vX.Y.Z` + GitHub Release. Release
+  `okf-abstracts` first: this bundle's CI pins it by tag, which must exist
+  (and be public) before this repo's release CI can pass.

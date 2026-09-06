@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [Unreleased]
+
+### Changed
+
+- **Glue slim-down**: looped MCP resource listing, shared hooks loader, slimmer `bump_version.sh`, stub-free `package.json` (~60 lines cut, MCP test green)
+- **Harness parity**: byte-identical Bash regen ports (25/25 files) plus CI regen-freshness gate over OpenClaw and IDE rule files
+
 ## [0.1.1] - 2026-09-05
 
 ### Added
@@ -27,8 +34,6 @@
 
 - Skill frontmatter `type: Concept` → `type: Skill` (subtype_of already referenced Skill)
 - Canonical linkage key `subtypes_of` → `subtype_of` across all bundles (aliases accepted with warnings)
-- Glue slim-down: looped MCP resource listing, shared hooks loader, slimmer `bump_version.sh`, stub-free `package.json` (MCP test green)
-- Harness parity: byte-identical Bash regen ports (25/25 files) plus CI regen-freshness gate over OpenClaw and IDE rule files
 
 ## [0.1.0] - 2026-08-29
 
