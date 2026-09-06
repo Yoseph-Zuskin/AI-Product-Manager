@@ -6,16 +6,16 @@ jobs:
   knowledge:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           path: AI-Product-Manager
       # Pinned abstracts release; works once okf-abstracts is public.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: Yoseph-Zuskin/okf-abstracts
           ref: v0.1.0
           path: okf-abstracts
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.14'
       - run: pip install -r okf-abstracts/requirement.txt
@@ -35,8 +35,8 @@ jobs:
   mcp:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: lts/*
       - run: cd ai-pm-mcp && npm install && npm test
