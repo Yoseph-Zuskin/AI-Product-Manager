@@ -161,6 +161,7 @@ All content is **based on cited synthesis of private educational materials and p
 | Cursor | `.cursor/rules/ai-pm.md` |
 | Windsurf | `.windsurf/rules/ai-pm.md` |
 | OpenCode | `.opencode/plugins/ai-pm.mjs` |
+| OpenClaw | `.openclaw/skills/ai-pm/` |
 | Devin | `.devin-plugin/plugin.json` |
 | Grok | `.grok-plugin/plugin.json` |
 | Qoder | `.qoder-plugin/plugin.json` |
@@ -169,7 +170,6 @@ All content is **based on cited synthesis of private educational materials and p
 | Copilot | `.github/plugin.json` |
 | Cline | `.clinerules/ai-pm.md` |
 | Kiro | `.kiro/steering/ai-pm.md` |
-| MCP | `ai-pm-mcp/` (any MCP host) |
 
 ## ⚖️ Legal
 
