@@ -1,26 +1,19 @@
-<p align="center">
-  <img src="assets/logo.svg" width="220" alt="AI Product Manager">
-</p>
+# AI Product Manager
 
-<h1 align="center">AI Product Manager</h1>
+> Your agent as your AI product manager — 19 skills and 21 concepts for daily product work, from discovery to board narratives.
 
-<p align="center">
-  <em>Synthesized AI product strategy from Kellogg Executive Education — ready for your agent.</em>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/github/v/tag/Yoseph-Zuskin/AI-Product-Manager?style=flat-square&color=6366F1&label=version" alt="Version">
-  <img src="https://img.shields.io/github/actions/workflow/status/Yoseph-Zuskin/AI-Product-Manager/ci.yml?branch=main&style=flat-square&label=CI" alt="CI">
-  <img src="https://img.shields.io/github/license/Yoseph-Zuskin/AI-Product-Manager?style=flat-square&color=6366F1" alt="License">
-  <img src="https://img.shields.io/badge/works%20with-19%20skills-6366F1?style=flat-square" alt="Works with 19 skills">
-  <img src="https://img.shields.io/badge/harnesses-15-6366F1?style=flat-square" alt="15 harnesses">
-  <img src="https://img.shields.io/badge/MCP-ready-6366F1?style=flat-square" alt="MCP ready">
-  <img src="https://img.shields.io/badge/OKF-v0.2-6366F1?style=flat-square" alt="OKF v0.2">
-</p>
+[![Specification](https://img.shields.io/badge/Specification-OKF_v0.2-blue.svg)](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)
+[![Version](https://img.shields.io/badge/Version-0.1.1-green.svg)](https://github.com/Yoseph-Zuskin/AI-Product-Manager/releases/tag/v0.1.1)
+[![CI](https://img.shields.io/github/actions/workflow/status/Yoseph-Zuskin/AI-Product-Manager/ci.yml?branch=main&label=CI)](https://github.com/Yoseph-Zuskin/AI-Product-Manager/actions)
+[![Harnesses](https://img.shields.io/badge/harnesses-14-blue.svg)](#-harness-compatibility)
+[![Protocol](https://img.shields.io/badge/MCP-Ready-purple.svg)](#-mcp-server)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
-AI Product Manager is a multi-harness plugin that puts a **cited synthesis of private educational materials and public web knowledge** inside your agent. It distills two Kellogg Executive Education certificate programs—**AI Strategies for Business Transformations** and **AI-Driven Product Strategy** (Professor Mohan Sawhney)—into an actionable, agent-ready knowledge bundle with 19 workflow skills, 21 concepts, and 11 templates.
+## 🌟 Overview
+
+**AI Product Manager** is a multi-harness plugin that puts an **actionable AI product management practice** inside your agent: 19 workflow skills and 21 concepts covering discovery, design, architecture, governance, pricing, growth, and communication — built for daily product work, from standup decisions to board narratives. The knowledge bundle implements [OKF v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md), with provenance on every concept. Its content is a **cited synthesis of private educational materials and public web knowledge**, including two Kellogg Executive Education certificate programs (Professor Mohan Sawhney).
 
 ## ✨ What it does
 
