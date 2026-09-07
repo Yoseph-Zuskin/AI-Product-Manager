@@ -42,4 +42,4 @@ jobs:
       - run: cd ai-pm-mcp && npm install && npm test
       # READMEs carry intentional marketing HTML (MD033), enforced by config elsewhere.
       # NOTE: this job checks out the bundle at root (unlike knowledge/ above).
-      - run: npx --yes markdownlint-cli2 "**/*.md" "!**/README.md"
+      - run: npx --yes markdownlint-cli2 "**/*.md" "!**/README.md" "!**/node_modules/**"
