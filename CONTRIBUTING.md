@@ -27,11 +27,13 @@ Thank you for your interest in contributing to **AI-Product-Manager** — a publ
 ### Getting Started
 
 ```bash
-git clone https://github.com/Yoseph-Zuskin/AI-Product-Manager.git
+git clone https://github.com/<github-user>/AI-Product-Manager.git
 cd AI-Product-Manager
 pip install -r okf-abstracts/requirement.txt  # for OKF validators
 cd ai-pm-mcp && npm install && cd ..          # for MCP server
 ```
+
+> **Note for contributors running pre-commit hooks locally:** the OKF pre-commit hooks (`okf-validate`, `okf-consistency`, `okf-links`, `okf-newlines`) require the `okf-abstracts` repo to be checked out as a sibling directory (i.e., `../okf-abstracts` relative to this repo). This is because the validation scripts need to read the base ontology entity files directly from the filesystem. CI does not use pre-commit; it checks out both repos and runs validation scripts directly, so no sibling checkout is required for CI passes.
 
 ---
 
