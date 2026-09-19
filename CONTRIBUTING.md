@@ -109,6 +109,11 @@ All must pass with `0 errors, 0 warnings` on this repo and `okf-abstracts` (run 
 4. Review PR (reconcile duplicate headers), squash-merge to `main`.
 5. Tag job fires on `VERSION` change → `vX.Y.Z` tag + GitHub Release.
 6. **Verify live**: run one install test per harness (Codex `/plugins`, Claude Discover, Cursor `/add-plugin`, Copilot settings).
+7. **Post-release visibility** (maintainer only, keeps the BundleDex listing working):
+   - Submit/update the listing at `https://bundledex.net/submit` (repo URL, keyword-rich description: what it is + OKF v0.2 + 14 harnesses + MCP server, comma-separated tags).
+   - Set GitHub repo topics (mirror the BundleDex tags; e.g. `okf`, `open-knowledge-format`, `knowledge-bundle`, `ai-agents`, `ai-product-management`, `product-management`, `mcp`, harness names).
+   - Keep the BundleDex badge in `README.md`; confirm the detail page shows OKF Conformant with the right version.
+   - Verify the OKF Index card after the sweep re-reads (no submission needed for GitHub): `https://okfindex.com/api/bundles?repo=Yoseph-Zuskin/AI-Product-Manager` — concept URLs must resolve (root `index.md` uses file-relative links for this reason), `updated_at` must advance past the release push.
 
 ---
 

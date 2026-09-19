@@ -44,3 +44,53 @@
 * **Harness parity**: `regen_openclaw.sh`/`regen_ides.sh` Bash ports proven
   byte-identical to the `.ps1` originals (25/25 files); CI gates regen
   freshness for OpenClaw copies plus all 5 IDE rule files.
+
+## 2026-09-07
+
+* **CI fixes**: abstracts pin moved from stale `v0.1.0` tag to `main`;
+  markdownlint excludes `node_modules` (third-party docs failed the gate);
+  `release.yml` tag-fetch fix, auto-merge removal, Node-24 majors.
+* **Docs**: new `CONTRIBUTING.md` (adversarial review required pre-PR);
+  `README` IP phrasing generalized to cited synthesis; `AGENTS.md`
+  contribution pointer; markdownlint numbering fixes.
+* **v0.1.1 goals**: `README` MCP-server section; sync `Other Agents` line
+  and compatibility table (cline, kiro, MCP); release once abstracts is
+  re-tagged and public.
+* **v0.1.2 goals**: investigate ChatGPT footnote rendering (`[^id]` refs
+  show literally, definitions list missing - files verified complete, 7/7
+  refs defined in-skill; likely host-side, may need inline links or host
+  feedback).
+
+## 2026-09-12
+
+* **SkillSpector scan**: static-only, score 56 on 45 hits at 100% component
+  coverage (skills, MCP server, hooks, scripts). Verified: shell-idiom and
+  doc-link hits false; substantiated hygiene is unpinned npx markdownlint
+  and caret-range MCP SDK (pin + lockfile + npm audit). Scanner-missed
+  hardening backlog confirmed by reading code: unsanitized path joins in
+  `mcp-server.js` CallTool/ReadResource, dynamic import in OpenCode plugin,
+  hooks trust equals repo trust.
+* **SECURITY.md**: vulnerability policy plus scan triage and hardening backlog.
+* **CI verdict**: same as abstracts - static fork-safe job, recommendation
+  gate, LLM conditional. No workflow added yet.
+
+## 2026-09-13
+
+* **Semantic scan**: `opencode_cli` provider with Nemotron 3 Ultra Free,
+  score 58/100 (static 56 + 2 semantic delta), 0 semantic findings (3
+  analyzers succeeded, 1 degraded). Delta: 0 findings — no actionable
+  security issues. Static HIGH score remains a pattern artifact.
+* **SECURITY.md**: updated with semantic scan addendum (score 58, 0
+  findings, posture unchanged).
+* **Semantic re-scan (Muse Spark)**: `opencode_cli` provider, model
+  `opencode/muse-spark-1.3-contributor-free`, score 58/100 — identical to
+  the Nemotron semantic baseline. LLM stage degraded (0/4 calls: shared
+  runtime budget expired before any model inference), so the run is
+  static-only and the model was never invoked.
+* **Triage**: 0 new findings, 0 new true positives — posture unchanged.
+* **SECURITY.md**: appended Muse Spark re-scan addendum.
+* **Semantic re-scan (Nemotron 3 Ultra Free)**: `opencode_cli` provider,
+  model `opencode/nemotron-3-ultra-free`, score 69/100 — +11 vs the prior
+  semantic baseline (static-pattern churn, no semantic findings). LLM stage
+  degraded (0/4 calls: shared runtime budget expired), run is static-only.
+  Posture unchanged.
