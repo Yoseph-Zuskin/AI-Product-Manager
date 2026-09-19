@@ -19,6 +19,7 @@
 - `release.yml`: tag job fetches tags first; auto-merge removed; Node-24 action majors
 - `README` IP phrasing generalized to cited synthesis; markdownlint numbering fixes
 - Privacy/consent guidance from SkillSpector semantic findings: telemetry redaction in `ai-pm-evals`, context redaction in `ai-pm-get-context`, informed-consent invariants in `ai-pm-research`
+- Adversarial review fix: `human:` actor prefix on 6 reference `author` fields (trust-tier correctness)
 
 ### Security
 

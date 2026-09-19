@@ -9,7 +9,7 @@ tags:
 - framework
 - lifecycle
 resource: https://online.em.kellogg.northwestern.edu/ai-strategies-for-business-transformations-program
-author: Mohanbir Sawhney
+author: human:mohan-sawhney
 subtype_of:
 - { type: Reference, resource: https://www.github.com/Yoseph-Zuskin/okf-abstracts/blob/v0.1.0/entities/domain/reference.md, version: v0.1.0 }
 status: draft
