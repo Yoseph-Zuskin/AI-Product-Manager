@@ -46,7 +46,8 @@ bump_bundle_version() {
     if [[ ! -f "$file" ]]; then return; fi
     local orig
     orig="$(cat "$file")"
-    sed -i.bak -E "s/\"version\":[[:space:]]*\"[0-9]+\.[0-9]+\.[0-9]+\",?/\"version\": \"$NEW_VERSION\",/g" "$file" && rm -f "$file.bak"
+    # Use sed_inplace to avoid backup file creation and && pattern
+    sed_inplace "s/\"version\":[[:space:]]*\"[0-9]+\.[0-9]+\.[0-9]+\",?/\"version\": \"$NEW_VERSION\",/g" "$file"
     if ! diff -q <(echo "$orig") "$file" >/dev/null 2>&1; then
         changed+=("$file")
     fi

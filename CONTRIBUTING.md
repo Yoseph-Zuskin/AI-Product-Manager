@@ -27,11 +27,13 @@ Thank you for your interest in contributing to **AI-Product-Manager** — a publ
 ### Getting Started
 
 ```bash
-git clone https://github.com/Yoseph-Zuskin/AI-Product-Manager.git
+git clone https://github.com/<github-user>/AI-Product-Manager.git
 cd AI-Product-Manager
 pip install -r okf-abstracts/requirement.txt  # for OKF validators
 cd ai-pm-mcp && npm install && cd ..          # for MCP server
 ```
+
+> **Note for contributors running pre-commit hooks locally:** the OKF pre-commit hooks (`okf-validate`, `okf-consistency`, `okf-links`, `okf-newlines`) require the `okf-abstracts` repo to be checked out as a sibling directory (i.e., `../okf-abstracts` relative to this repo). This is because the validation scripts need to read the base ontology entity files directly from the filesystem. CI does not use pre-commit; it checks out both repos and runs validation scripts directly, so no sibling checkout is required for CI passes.
 
 ---
 
@@ -109,6 +111,11 @@ All must pass with `0 errors, 0 warnings` on this repo and `okf-abstracts` (run 
 4. Review PR (reconcile duplicate headers), squash-merge to `main`.
 5. Tag job fires on `VERSION` change → `vX.Y.Z` tag + GitHub Release.
 6. **Verify live**: run one install test per harness (Codex `/plugins`, Claude Discover, Cursor `/add-plugin`, Copilot settings).
+7. **Post-release visibility** (maintainer only, keeps the BundleDex listing working):
+   - Submit/update the listing at `https://bundledex.net/submit` (repo URL, keyword-rich description: what it is + OKF v0.2 + 14 harnesses + MCP server, comma-separated tags).
+   - Set GitHub repo topics (mirror the BundleDex tags; e.g. `okf`, `open-knowledge-format`, `knowledge-bundle`, `ai-agents`, `ai-product-management`, `product-management`, `mcp`, harness names).
+   - Keep the BundleDex badge in `README.md`; confirm the detail page shows OKF Conformant with the right version.
+   - Verify the OKF Index card after the sweep re-reads (no submission needed for GitHub): `https://okfindex.com/api/bundles?repo=Yoseph-Zuskin/AI-Product-Manager` — concept URLs must resolve (root `index.md` uses file-relative links for this reason), `updated_at` must advance past the release push.
 
 ---
 

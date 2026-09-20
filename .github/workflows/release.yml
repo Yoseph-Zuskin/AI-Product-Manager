@@ -48,8 +48,9 @@ jobs:
               sys.exit(1)
           today = datetime.date.today().isoformat()
           ver = "${{ inputs.version }}"
-          t = (t[: m.start()] + f"## [{ver}] - {today}\n" + m.group(1)
-               + t[m.end():])
+          body = m.group(1).lstrip("\n")
+          t = (t[: m.start()] + "## [Unreleased]\n\n"
+               + f"## [{ver}] - {today}\n\n" + body + t[m.end():])
           p.write_text(t, encoding="utf-8")
           print(f"CHANGELOG promoted to [{ver}] - {today}")
           EOF
@@ -78,7 +79,9 @@ jobs:
           git checkout -b release/v${{ inputs.version }}
           git add -A
           git commit -m "chore: release v${{ inputs.version }}"
-          git push -u origin release/v${{ inputs.version }}
+          # Idempotent retries: a stale remote release branch from a
+          # failed dispatch must not reject the push.
+          git push --force-with-lease -u origin release/v${{ inputs.version }}
           gh pr create --base main --head release/v${{ inputs.version }} \
             --title "Release v${{ inputs.version }}" \
             --body "Automated release PR. CI + review must pass before merge."

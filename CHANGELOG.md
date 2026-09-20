@@ -2,10 +2,28 @@
 
 ## [Unreleased]
 
+### Added
+
+- `CONTRIBUTING.md`: contribution workflow, gates, harness parity, release process (adversarial review required pre-PR)
+- `SECURITY.md`: vulnerability reporting policy + SkillSpector static-scan triage (dependency-pinning hygiene only; MCP path-traversal hardening backlog)
+
 ### Changed
 
 - **Glue slim-down**: looped MCP resource listing, shared hooks loader, slimmer `bump_version.sh`, stub-free `package.json` (~60 lines cut, MCP test green)
 - **Harness parity**: byte-identical Bash regen ports (25/25 files) plus CI regen-freshness gate over OpenClaw and IDE rule files
+
+### Fixed
+
+- CI abstracts pin: stale `v0.1.0` tag → `main`
+- CI markdownlint excludes `node_modules` (third-party docs failed the gate)
+- `release.yml`: tag job fetches tags first; auto-merge removed; Node-24 action majors
+- `README` IP phrasing generalized to cited synthesis; markdownlint numbering fixes
+- Privacy/consent guidance from SkillSpector semantic findings: telemetry redaction in `ai-pm-evals`, context redaction in `ai-pm-get-context`, informed-consent invariants in `ai-pm-research`
+- Adversarial review fix: `human:` actor prefix on 6 reference `author` fields (trust-tier correctness)
+
+### Security
+
+- SkillSpector 2.11.2 semantic re-scan of `skills/` (2026-09-19, `copilot_cli`/Copilot Free, all 19 skills successful): max risk 9 (LOW, CAUTION); 3 MEDIUM advisories on privacy/consent/redaction guidance (`ai-pm-evals`, `ai-pm-get-context`, `ai-pm-research`) logged as doc backlog. No exploitable issues; see `SECURITY.md`
 
 ## [0.1.1] - 2026-09-05
 

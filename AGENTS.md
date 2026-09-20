@@ -195,4 +195,6 @@ Then invoke target skill via `@ai-pm <skill> <task>`.
 - Release: dispatch the `release` workflow with `x.y.z` → `release/vX.Y.Z`
   PR → review → merge → tag `vX.Y.Z` + GitHub Release. Release
   `okf-abstracts` first: this bundle's CI pins it by tag, which must exist
-  (and be public) before this repo's release CI can pass.
+  (and be public) before this repo's release CI can pass. After release, run
+  the post-release visibility step in CONTRIBUTING.md (BundleDex listing,
+  repo topics, badge).

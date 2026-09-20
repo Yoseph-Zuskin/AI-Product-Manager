@@ -128,6 +128,7 @@ Routes to: the skill matching the user's task, via [`ai-pm-index`](../ai-pm-inde
 ### Invariants
 
 - Read-only: never modifies product files; missing assets are reported, never invented.
+- Redact before retaining: strip credentials, tokens, private URLs, and secrets from loaded context; confirm with the user before loading assets that may carry confidential product information.
 
 ## Verification
 

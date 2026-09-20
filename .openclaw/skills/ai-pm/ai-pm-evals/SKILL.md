@@ -56,7 +56,7 @@ Scope what quality means for the feature before building anything:
 
 ## Failure Loop
 
-Production telemetry (thumbs-down, escalations, rewrites, support tickets) feeds failure analysis, which expands the golden set and reprioritizes the backlog. Evals grow with the product; a static eval set is a decaying one.
+Production telemetry (thumbs-down, escalations, rewrites, support tickets) feeds failure analysis, which expands the golden set and reprioritizes the backlog. Evals grow with the product; a static eval set is a decaying one. Telemetry entering datasets requires notice and consent, redaction of sensitive content, access controls, and a defined retention window — never copy raw user content into golden sets.
 
 ## Workflow
 
