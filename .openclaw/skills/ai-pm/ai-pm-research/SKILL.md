@@ -125,6 +125,7 @@ Route to [`ai-pm-discover`](../ai-pm-discover/SKILL.md) for opportunity validati
 ### Invariants
 
 - Every claim cites a source; unknowns are marked unknown, never filled in.
+- Human-subject methods (interviews, surveys, diary studies) require informed consent, collect only necessary data, anonymize findings, and define retention before the study starts.
 
 ## Verification
 
