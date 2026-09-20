@@ -43,3 +43,35 @@ jobs:
       # READMEs carry intentional marketing HTML (MD033), enforced by config elsewhere.
       # NOTE: this job checks out the bundle at root (unlike knowledge/ above).
       - run: npx --yes markdownlint-cli2@0.17.0 "**/*.md" "!**/README.md" "!**/node_modules/**"
+
+  version-sync:
+    # Back-merge reminder: develop must carry the latest released version
+    # everywhere it is displayed (VERSION file + README badge tag and
+    # label). Runs on develop pushes only — feature branches trail
+    # deliberately until release, so they are exempt.
+    if: github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: VERSION and badge match latest tag
+        run: |
+          git fetch --tags origin
+          latest="$(git tag --list 'v*.*.*' --sort=-v:refname | head -n 1)"
+          [ -n "$latest" ] || { echo "no tags yet; skipping"; exit 0; }
+          want="${latest#v}"
+          have="$(cat VERSION)"
+          [ "$have" = "$want" ] || { echo "VERSION=$have trails latest tag $latest (back-merge main?)"; exit 1; }
+          grep -q "releases/tag/v$want" README.md || { echo "README badge tag URL trails $latest"; exit 1; }
+          grep -q "Version-$want-green" README.md || { echo "README badge label trails $latest"; exit 1; }
+          # Manifest list mirrors the release.yml sanity check — update both together.
+          for m in package.json plugin.json gemini-extension.json \
+            .codex-plugin/plugin.json .claude-plugin/plugin.json \
+            .devin-plugin/plugin.json .grok-plugin/plugin.json \
+            .qoder-plugin/plugin.json \
+            .openclaw/skills/ai-pm/manifest.json ai-pm-mcp/package.json \
+            pi-extension/package.json .github/plugin.json; do
+            grep -q "\"version\": \"$want\"" "$m" || { echo "$m trails $latest"; exit 1; }
+          done
+          echo "version sync OK on $latest"
