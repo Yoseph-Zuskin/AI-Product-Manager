@@ -8,6 +8,7 @@
 [![Harnesses](https://img.shields.io/badge/harnesses-14-blue.svg)](#-harness-compatibility)
 [![Protocol](https://img.shields.io/badge/MCP-Ready-purple.svg)](#-mcp-server)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![BundleDex](https://bundledex.net/badge/ai-product-manager.svg)](https://bundledex.net/bundles/ai-product-manager/)
 
 ---
 
